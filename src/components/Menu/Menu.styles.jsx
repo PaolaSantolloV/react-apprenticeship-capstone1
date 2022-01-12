@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+/* istanbul ignore next */
 export const StyledContainer = styled.div`
   background: ${({ theme }) => theme.body};
   border-bottom-right-radius: 8px;

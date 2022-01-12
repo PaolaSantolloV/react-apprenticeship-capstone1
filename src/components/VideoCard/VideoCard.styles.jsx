@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+/* istanbul ignore next */
 export const StyledContainer = styled.div`
   background-color: ${({ theme }) => theme.body};
   border-radius: 8px;
@@ -22,6 +23,7 @@ export const StyledImage = styled.img`
   border-radius: 8px;
 `;
 
+/* istanbul ignore next */
 export const StyledTitle = styled.h2`
   text-decoration: none;
   text-transform: uppercase;

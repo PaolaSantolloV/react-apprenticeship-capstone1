@@ -33,11 +33,11 @@ function App() {
               <Private exact path="/favorites">
                 <FavoritesPage />
               </Private>
+              <Route exact path="/404">
+                <NotFound />
+              </Route>
               <Route path="/:id">
                 <VideoDetailPage />
-              </Route>
-              <Route path="*">
-                <NotFound />
               </Route>
             </Switch>
           </Layout>

@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
+/* istanbul ignore next */
 export const GlobalStyles = createGlobalStyle`
   body {
     background: ${({ theme }) => theme.body};
@@ -10,6 +11,7 @@ export const GlobalStyles = createGlobalStyle`
     color:${({ theme }) => theme.text};
   }
 `;
+
 export const lightTheme = {
   body: 'white',
   text: '#383838',

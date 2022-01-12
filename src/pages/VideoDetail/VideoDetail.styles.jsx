@@ -27,10 +27,12 @@ export const StyledWrapperIcon = styled.div`
   margin: 10px;
 `;
 
+/* istanbul ignore next */
 export const StyledDivider = styled.hr`
   border: 0.5px solid ${({ theme }) => theme.secondary};
 `;
 
+/* istanbul ignore next */
 export const StyledTitle = styled.h2`
   text-decoration: none;
   text-transform: uppercase;

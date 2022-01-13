@@ -1,0 +1,93 @@
+----------------------------|----------|----------|----------|----------|-------------------|
+File                        |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+----------------------------|----------|----------|----------|----------|-------------------|
+All files                   |    77.61 |     47.5 |    67.35 |    77.61 |                   |
+ src                        |    66.67 |      100 |      100 |    66.67 |                   |
+  index.js                  |        0 |      100 |      100 |        0 |                 7 |
+  theme.js                  |      100 |      100 |      100 |      100 |                   |
+ src/components/App         |    71.43 |       25 |       50 |    71.43 |                   |
+  App.component.jsx         |    71.43 |       25 |       50 |    71.43 |             19,20 |
+  index.js                  |        0 |        0 |        0 |        0 |                   |
+ src/components/Button      |      100 |      100 |      100 |      100 |                   |
+  Button.component.jsx      |      100 |      100 |      100 |      100 |                   |
+  Button.styles.jsx         |      100 |      100 |      100 |      100 |                   |
+  index.js                  |        0 |        0 |        0 |        0 |                   |
+ src/components/ChannelCard |      100 |      100 |      100 |      100 |                   |
+  ChannelCard.component.jsx |      100 |      100 |      100 |      100 |                   |
+  ChannelCard.styles.jsx    |      100 |      100 |      100 |      100 |                   |
+  index.js                  |        0 |        0 |        0 |        0 |                   |
+ src/components/Header      |       45 |       50 |       25 |       45 |                   |
+  Header.component.jsx      |    31.25 |       50 |    14.29 |    31.25 |... 41,46,50,56,75 |
+  Header.styles.jsx         |      100 |      100 |      100 |      100 |                   |
+  index.js                  |        0 |        0 |        0 |        0 |                   |
+ src/components/IconButton  |      100 |      100 |      100 |      100 |                   |
+  IconButton.component.jsx  |      100 |      100 |      100 |      100 |                   |
+  IconButton.styles.jsx     |      100 |      100 |      100 |      100 |                   |
+  index.js                  |        0 |        0 |        0 |        0 |                   |
+ src/components/Input       |      100 |      100 |      100 |      100 |                   |
+  Input.component.jsx       |      100 |      100 |      100 |      100 |                   |
+  Input.styles.jsx          |      100 |      100 |      100 |      100 |                   |
+  index.js                  |        0 |        0 |        0 |        0 |                   |
+ src/components/Layout      |      100 |      100 |      100 |      100 |                   |
+  Layout.component.jsx      |      100 |      100 |      100 |      100 |                   |
+  Layout.styles.jsx         |      100 |      100 |      100 |      100 |                   |
+  index.js                  |        0 |        0 |        0 |        0 |                   |
+ src/components/LoginForm   |      100 |      100 |      100 |      100 |                   |
+  LoginForm.component.jsx   |      100 |      100 |      100 |      100 |                   |
+  LoginForm.styles.jsx      |      100 |      100 |      100 |      100 |                   |
+  index.js                  |        0 |        0 |        0 |        0 |                   |
+ src/components/Menu        |       60 |       50 |    33.33 |       60 |                   |
+  Menu.component.jsx        |       50 |       50 |    33.33 |       50 |             13,17 |
+  Menu.styles.jsx           |      100 |      100 |      100 |      100 |                   |
+  index.js                  |        0 |        0 |        0 |        0 |                   |
+ src/components/Modal       |      100 |      100 |      100 |      100 |                   |
+  Modal.component.jsx       |      100 |      100 |      100 |      100 |                   |
+  Modal.styles.jsx          |      100 |      100 |      100 |      100 |                   |
+  index.js                  |        0 |        0 |        0 |        0 |                   |
+ src/components/Private     |      100 |       50 |      100 |      100 |                   |
+  Private.component.jsx     |      100 |       50 |      100 |      100 |                13 |
+  index.js                  |        0 |        0 |        0 |        0 |                   |
+ src/components/SearchBar   |      100 |      100 |      100 |      100 |                   |
+  SearchBar.component.jsx   |      100 |      100 |      100 |      100 |                   |
+  SearchBar.styles.jsx      |      100 |      100 |      100 |      100 |                   |
+  index.js                  |        0 |        0 |        0 |        0 |                   |
+ src/components/Switch      |      100 |      100 |      100 |      100 |                   |
+  Switch.component.jsx      |      100 |      100 |      100 |      100 |                   |
+  Switch.styles.jsx         |      100 |      100 |      100 |      100 |                   |
+  index.js                  |        0 |        0 |        0 |        0 |                   |
+ src/components/VideoCard   |      100 |      100 |      100 |      100 |                   |
+  VideoCard.component.jsx   |      100 |      100 |      100 |      100 |                   |
+  VideoCard.styles.jsx      |      100 |      100 |      100 |      100 |                   |
+  index.js                  |        0 |        0 |        0 |        0 |                   |
+ src/pages/Favorites        |       75 |       50 |       50 |       75 |                   |
+  Favorites.page.jsx        |       50 |       50 |       50 |       50 |                11 |
+  Favorites.styles.jsx      |      100 |      100 |      100 |      100 |                   |
+  index.js                  |        0 |        0 |        0 |        0 |                   |
+ src/pages/Home             |      100 |    83.33 |      100 |      100 |                   |
+  Home.page.jsx             |      100 |    83.33 |      100 |      100 |                14 |
+  Home.styles.jsx           |      100 |      100 |      100 |      100 |                   |
+  index.js                  |        0 |        0 |        0 |        0 |                   |
+ src/pages/NotFound         |      100 |      100 |      100 |      100 |                   |
+  NotFound.page.jsx         |      100 |      100 |      100 |      100 |                   |
+  index.js                  |        0 |        0 |        0 |        0 |                   |
+ src/pages/VideoDetail      |    58.33 |        0 |        0 |    58.33 |                   |
+  VideoDetail.page.jsx      |        0 |        0 |        0 |        0 |    21,22,24,38,67 |
+  VideoDetail.styles.jsx    |      100 |      100 |      100 |      100 |                   |
+  index.js                  |        0 |        0 |        0 |        0 |                   |
+ src/providers/Auth         |    70.59 |       50 |       60 |    70.59 |                   |
+  Auth.provider.jsx         |    70.59 |       50 |       60 |    70.59 |    11,28,29,33,34 |
+  index.js                  |        0 |        0 |        0 |        0 |                   |
+ src/utils                  |     62.5 |      100 |       50 |     62.5 |                   |
+  constants.js              |      100 |      100 |      100 |      100 |                   |
+  storage.js                |    57.14 |      100 |       50 |    57.14 |            7,8,13 |
+ src/utils/mocks            |      100 |      100 |      100 |      100 |                   |
+  youtube-videos-mock.js    |      100 |      100 |      100 |      100 |                   |
+----------------------------|----------|----------|----------|----------|-------------------|
+Jest: "global" coverage threshold for statements (80%) not met: 77.61%
+Jest: "global" coverage threshold for lines (80%) not met: 77.61%
+
+Test Suites: 19 passed, 19 total
+Tests:       25 passed, 25 total
+Snapshots:   0 total
+Time:        6.318s
+Ran all test suites matching /a/i.

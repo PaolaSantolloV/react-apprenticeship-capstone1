@@ -1,38 +1,45 @@
-import React, { useRef } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import React from 'react';
 
-import { useAuth } from '../../providers/Auth';
-import './Home.styles.css';
+import VideoCard from '../../components/VideoCard';
+import { youtubeVideosMock } from '../../utils/mocks/youtube-videos-mock';
+import ChannelCard from '../../components/ChannelCard/ChannelCard.component';
+import { StyledContainer, StyledWrapperVideos } from './Home.styles.jsx';
 
 function HomePage() {
-  const history = useHistory();
-  const sectionRef = useRef(null);
-  const { authenticated, logout } = useAuth();
-
-  function deAuthenticate(event) {
-    event.preventDefault();
-    logout();
-    history.push('/');
-  }
+  const isVideos = Boolean(youtubeVideosMock);
+  const isChannel = Boolean(youtubeVideosMock.items[0].id.channelId);
 
   return (
-    <section className="homepage" ref={sectionRef}>
-      <h1>Hello stranger!</h1>
-      {authenticated ? (
+    <StyledContainer>
+      {isVideos ? (
         <>
-          <h2>Good to have you back</h2>
-          <span>
-            <Link to="/" onClick={deAuthenticate}>
-              ← logout
-            </Link>
-            <span className="separator" />
-            <Link to="/secret">show me something cool →</Link>
-          </span>
+          {isChannel && (
+            <ChannelCard
+              description={youtubeVideosMock.items[0].snippet.description}
+              logo={youtubeVideosMock.items[0].snippet.thumbnails.default}
+              title={youtubeVideosMock.items[0].snippet.title}
+            />
+          )}
+          <StyledWrapperVideos>
+            {youtubeVideosMock.items.map(
+              (video) =>
+                video.id.videoId && (
+                  <VideoCard
+                    key={video.etag}
+                    id={video.id.videoId}
+                    image={video.snippet.thumbnails.medium}
+                    title={video.snippet.title}
+                    description={video.snippet.description}
+                    mockVideo
+                  />
+                )
+            )}
+          </StyledWrapperVideos>
         </>
       ) : (
-        <Link to="/login">let me in →</Link>
+        <h2>Error</h2>
       )}
-    </section>
+    </StyledContainer>
   );
 }
 

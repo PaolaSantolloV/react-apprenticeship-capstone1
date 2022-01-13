@@ -1,0 +1,85 @@
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+
+import {
+  FaUserAlt,
+  FaDoorOpen,
+  FaBars,
+  FaRegWindowClose,
+} from 'react-icons/fa';
+import { useAuth } from '../../providers/Auth';
+import SearchBar from '../SearchBar';
+import IconButton from '../IconButton';
+import Modal from '../Modal';
+
+import {
+  StyledHeader,
+  StyledWrapperIcon,
+  StyledWrapperIconClose,
+} from './Header.styles.jsx';
+import LoginForm from '../LoginForm';
+import Menu from '../Menu';
+import Switch from '../Switch/Switch.component';
+
+// eslint-disable-next-line react/prop-types
+function Header({ theme, toggleTheme }) {
+  const history = useHistory();
+  const { authenticated, logout, login } = useAuth();
+  const [showMenu, setShowMenu] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+
+  function deAuthenticate(event) {
+    event.preventDefault();
+    logout();
+    history.push('/');
+  }
+
+  function authenticate(event) {
+    event.preventDefault();
+    login();
+    setShowModal(false);
+    history.push('/');
+  }
+
+  return (
+    <StyledHeader>
+      <Modal show={showModal} handleClose={() => setShowModal(false)}>
+        <LoginForm authenticate={authenticate} />
+      </Modal>
+      {showMenu ? (
+        <IconButton styles="iconButtonClose" onClick={() => setShowMenu(false)}>
+          <StyledWrapperIconClose>
+            <FaRegWindowClose color="#EEEEEE" size="30px" />
+          </StyledWrapperIconClose>
+        </IconButton>
+      ) : (
+        <IconButton onClick={() => setShowMenu(true)}>
+          <StyledWrapperIcon>
+            <FaBars color="#EEEEEE" size="30px" />
+          </StyledWrapperIcon>
+        </IconButton>
+      )}
+
+      {showMenu && <Menu setShowMenu={setShowMenu} />}
+
+      <SearchBar />
+      <Switch isOn={theme} handleToggle={toggleTheme} label="Dark Mode" />
+
+      {authenticated ? (
+        <IconButton onClick={deAuthenticate}>
+          <StyledWrapperIcon>
+            <FaDoorOpen color="#EEEEEE" size="40px" />
+          </StyledWrapperIcon>
+        </IconButton>
+      ) : (
+        <IconButton onClick={() => setShowModal(true)}>
+          <StyledWrapperIcon>
+            <FaUserAlt color="#EEEEEE" size="40px" />
+          </StyledWrapperIcon>
+        </IconButton>
+      )}
+    </StyledHeader>
+  );
+}
+
+export default Header;

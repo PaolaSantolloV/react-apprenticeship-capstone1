@@ -34,9 +34,9 @@ function Header() {
     history.push('/');
   }
 
-  function authenticate(event) {
+  function authenticate(event, loginData) {
     event.preventDefault();
-    login();
+    login(loginData);
     setShowModal(false);
     history.push('/');
   }

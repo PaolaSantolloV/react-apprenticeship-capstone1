@@ -1,6 +1,7 @@
 import React, { useEffect, useContext, useCallback, useReducer } from 'react';
 
 import { AUTH_STORAGE_KEY } from '../utils/constants';
+import loginApi from '../utils/mocks/login.api';
 import { storage } from '../utils/storage';
 
 const GlobalContext = React.createContext(null);
@@ -20,6 +21,8 @@ function GlobalProvider({ children }) {
     isDarkTheme: '',
     isDark: false,
     inputValue: '',
+    sessionData: {},
+    isLogin: false,
   };
 
   function reducer(state, action) {
@@ -51,6 +54,11 @@ function GlobalProvider({ children }) {
           ...state,
           authenticated: action.payload,
         };
+      case 'sessionData':
+        return {
+          ...state,
+          sessionData: action.payload,
+        };
       default:
         throw new Error();
     }
@@ -67,15 +75,29 @@ function GlobalProvider({ children }) {
     });
   }, []);
 
-  const login = useCallback(() => {
-    dispatch({
-      type: 'authenticated',
-      payload: true,
-    });
-    storage.set(AUTH_STORAGE_KEY, true);
+  const login = useCallback((loginData) => {
+    loginApi(loginData.username, loginData.password)
+      .then((result) => {
+        dispatch({
+          type: 'sessionData',
+          payload: result,
+        });
+        dispatch({
+          type: 'authenticated',
+          payload: true,
+        });
+        storage.set(AUTH_STORAGE_KEY, true);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }, []);
 
   const logout = useCallback(() => {
+    dispatch({
+      type: 'sessionData',
+      payload: {},
+    });
     dispatch({
       type: 'authenticated',
       payload: false,

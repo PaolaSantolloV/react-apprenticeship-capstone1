@@ -1,12 +1,12 @@
 ----------------------------|----------|----------|----------|----------|-------------------|
 File                        |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
 ----------------------------|----------|----------|----------|----------|-------------------|
-All files                   |    77.61 |     47.5 |    67.35 |    77.61 |                   |
+All files                   |    74.83 |    43.48 |    66.67 |    74.83 |                   |
  src                        |    66.67 |      100 |      100 |    66.67 |                   |
   index.js                  |        0 |      100 |      100 |        0 |                 7 |
   theme.js                  |      100 |      100 |      100 |      100 |                   |
- src/components/App         |    71.43 |       25 |       50 |    71.43 |                   |
-  App.component.jsx         |    71.43 |       25 |       50 |    71.43 |             19,20 |
+ src/components/App         |      100 |      100 |      100 |      100 |                   |
+  App.component.jsx         |      100 |      100 |      100 |      100 |                   |
   index.js                  |        0 |        0 |        0 |        0 |                   |
  src/components/Button      |      100 |      100 |      100 |      100 |                   |
   Button.component.jsx      |      100 |      100 |      100 |      100 |                   |
@@ -17,7 +17,7 @@ All files                   |    77.61 |     47.5 |    67.35 |    77.61 |       
   ChannelCard.styles.jsx    |      100 |      100 |      100 |      100 |                   |
   index.js                  |        0 |        0 |        0 |        0 |                   |
  src/components/Header      |       45 |       50 |       25 |       45 |                   |
-  Header.component.jsx      |    31.25 |       50 |    14.29 |    31.25 |... 41,46,50,56,75 |
+  Header.component.jsx      |    31.25 |       50 |    14.29 |    31.25 |... 41,46,50,56,79 |
   Header.styles.jsx         |      100 |      100 |      100 |      100 |                   |
   index.js                  |        0 |        0 |        0 |        0 |                   |
  src/components/IconButton  |      100 |      100 |      100 |      100 |                   |
@@ -28,8 +28,8 @@ All files                   |    77.61 |     47.5 |    67.35 |    77.61 |       
   Input.component.jsx       |      100 |      100 |      100 |      100 |                   |
   Input.styles.jsx          |      100 |      100 |      100 |      100 |                   |
   index.js                  |        0 |        0 |        0 |        0 |                   |
- src/components/Layout      |      100 |      100 |      100 |      100 |                   |
-  Layout.component.jsx      |      100 |      100 |      100 |      100 |                   |
+ src/components/Layout      |      100 |       50 |      100 |      100 |                   |
+  Layout.component.jsx      |      100 |       50 |      100 |      100 |                15 |
   Layout.styles.jsx         |      100 |      100 |      100 |      100 |                   |
   index.js                  |        0 |        0 |        0 |        0 |                   |
  src/components/LoginForm   |      100 |      100 |      100 |      100 |                   |
@@ -74,8 +74,8 @@ All files                   |    77.61 |     47.5 |    67.35 |    77.61 |       
   VideoDetail.page.jsx      |        0 |        0 |        0 |        0 |    21,22,24,38,67 |
   VideoDetail.styles.jsx    |      100 |      100 |      100 |      100 |                   |
   index.js                  |        0 |        0 |        0 |        0 |                   |
- src/providers/Auth         |    70.59 |       50 |       60 |    70.59 |                   |
-  Auth.provider.jsx         |    70.59 |       50 |       60 |    70.59 |    11,28,29,33,34 |
+ src/providers              |    56.67 |       20 |       50 |    56.67 |                   |
+  Global.provider.jsx       |    56.67 |       20 |       50 |    56.67 |... 79,83,87,90,94 |
   index.js                  |        0 |        0 |        0 |        0 |                   |
  src/utils                  |     62.5 |      100 |       50 |     62.5 |                   |
   constants.js              |      100 |      100 |      100 |      100 |                   |
@@ -83,11 +83,11 @@ All files                   |    77.61 |     47.5 |    67.35 |    77.61 |       
  src/utils/mocks            |      100 |      100 |      100 |      100 |                   |
   youtube-videos-mock.js    |      100 |      100 |      100 |      100 |                   |
 ----------------------------|----------|----------|----------|----------|-------------------|
-Jest: "global" coverage threshold for statements (80%) not met: 77.61%
-Jest: "global" coverage threshold for lines (80%) not met: 77.61%
+Jest: "global" coverage threshold for statements (80%) not met: 74.83%
+Jest: "global" coverage threshold for lines (80%) not met: 74.83%
 
-Test Suites: 19 passed, 19 total
-Tests:       25 passed, 25 total
+Test Suites: 20 passed, 20 total
+Tests:       26 passed, 26 total
 Snapshots:   0 total
-Time:        6.318s
+Time:        7.131s
 Ran all test suites matching /a/i.

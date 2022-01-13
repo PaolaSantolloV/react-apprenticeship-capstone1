@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import IconButton from '../../components/IconButton';
 import VideoCard from '../../components/VideoCard/VideoCard.component';
 import { youtubeVideosMock } from '../../utils/mocks/youtube-videos-mock';
-import { useAuth } from '../../providers/Auth';
+import { useGlobalContext } from '../../providers';
 import { FaRegHeart, FaHeart } from 'react-icons/fa';
 import {
   StyledContainer,
@@ -18,7 +18,7 @@ import {
 } from './VideoDetail.styles.jsx';
 
 function VideoDetailPage(props) {
-  const { authenticated } = useAuth();
+  const { state } = useGlobalContext();
   const [isLike, setIsLike] = useState(false);
 
   return (
@@ -34,7 +34,7 @@ function VideoDetailPage(props) {
         <StyledWrapperDescription>
           <StyledWrapperTitle>
             <StyledTitle>{props.history.location.video.title}</StyledTitle>
-            {authenticated && (
+            {state.authenticated && (
               <IconButton onClick={() => setIsLike(!isLike)}>
                 {isLike ? (
                   <StyledWrapperIcon>

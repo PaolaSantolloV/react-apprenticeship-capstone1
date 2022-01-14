@@ -29,7 +29,9 @@ function VideoCard({ image, id, title, description, mockVideo, favorite }) {
   const [isLike, setIsLike] = useState(false);
   const listFavVideos = storageFavVideos.get('videos');
 
-  const like = listFavVideos.some((item) => item.title === title);
+  const like =
+    listFavVideos !== null &&
+    listFavVideos.some((item) => item.title === title);
 
   useEffect(() => {
     if (like === true) {

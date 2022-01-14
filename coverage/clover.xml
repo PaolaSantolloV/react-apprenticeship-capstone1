@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1642115329737" clover="3.2.0">
-  <project timestamp="1642115329738" name="All files">
-    <metrics statements="185" coveredstatements="117" conditionals="57" coveredconditionals="20" methods="63" coveredmethods="35" elements="305" coveredelements="172" complexity="0" loc="185" ncloc="185" packages="22" files="59" classes="59"/>
+<coverage generated="1642139708210" clover="3.2.0">
+  <project timestamp="1642139708210" name="All files">
+    <metrics statements="214" coveredstatements="136" conditionals="73" coveredconditionals="27" methods="72" coveredmethods="42" elements="359" coveredelements="205" complexity="0" loc="214" ncloc="214" packages="22" files="59" classes="59"/>
     <package name="src">
       <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="index.js" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/index.js">
@@ -10,15 +10,15 @@
       </file>
       <file name="theme.js" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/theme.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="15" count="3" type="stmt"/>
-        <line num="22" count="3" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="22" count="4" type="stmt"/>
       </file>
     </package>
     <package name="src.components.App">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="App.component.jsx" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/App/App.component.jsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="13" count="1" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
       </file>
       <file name="index.js" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/App/index.js">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -28,12 +28,12 @@
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="Button.component.jsx" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/Button/Button.component.jsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="6" count="16" type="stmt"/>
+        <line num="6" count="25" type="stmt"/>
       </file>
       <file name="Button.styles.jsx" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/Button/Button.styles.jsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="6" type="stmt"/>
-        <line num="10" count="16" type="stmt"/>
+        <line num="3" count="7" type="stmt"/>
+        <line num="10" count="25" type="stmt"/>
       </file>
       <file name="index.js" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/Button/index.js">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -43,14 +43,14 @@
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="ChannelCard.component.jsx" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/ChannelCard/ChannelCard.component.jsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="12" count="3" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
       </file>
       <file name="ChannelCard.styles.jsx" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/ChannelCard/ChannelCard.styles.jsx">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="3" count="3" type="stmt"/>
-        <line num="19" count="3" type="stmt"/>
-        <line num="32" count="3" type="stmt"/>
-        <line num="36" count="3" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="32" count="4" type="stmt"/>
+        <line num="36" count="4" type="stmt"/>
       </file>
       <file name="index.js" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/ChannelCard/index.js">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -60,10 +60,10 @@
       <metrics statements="20" coveredstatements="9" conditionals="6" coveredconditionals="3" methods="8" coveredmethods="2"/>
       <file name="Header.component.jsx" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/Header/Header.component.jsx">
         <metrics statements="16" coveredstatements="5" conditionals="6" coveredconditionals="3" methods="7" coveredmethods="1"/>
-        <line num="26" count="6" type="stmt"/>
-        <line num="27" count="6" type="stmt"/>
-        <line num="28" count="6" type="stmt"/>
-        <line num="29" count="6" type="stmt"/>
+        <line num="26" count="10" type="stmt"/>
+        <line num="27" count="10" type="stmt"/>
+        <line num="28" count="10" type="stmt"/>
+        <line num="29" count="10" type="stmt"/>
         <line num="32" count="0" type="stmt"/>
         <line num="33" count="0" type="stmt"/>
         <line num="34" count="0" type="stmt"/>
@@ -71,7 +71,7 @@
         <line num="39" count="0" type="stmt"/>
         <line num="40" count="0" type="stmt"/>
         <line num="41" count="0" type="stmt"/>
-        <line num="44" count="6" type="stmt"/>
+        <line num="44" count="10" type="stmt"/>
         <line num="46" count="0" type="stmt"/>
         <line num="50" count="0" type="stmt"/>
         <line num="56" count="0" type="stmt"/>
@@ -79,10 +79,10 @@
       </file>
       <file name="Header.styles.jsx" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/Header/Header.styles.jsx">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="3" type="stmt"/>
-        <line num="4" count="6" type="stmt"/>
-        <line num="17" count="3" type="stmt"/>
-        <line num="22" count="3" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="8" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="22" count="4" type="stmt"/>
       </file>
       <file name="index.js" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/Header/index.js">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -92,15 +92,15 @@
       <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
       <file name="IconButton.component.jsx" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/IconButton/IconButton.component.jsx">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="7" count="23" type="stmt"/>
-        <line num="9" count="23" type="cond" truecount="2" falsecount="0"/>
+        <line num="7" count="29" type="stmt"/>
+        <line num="9" count="29" type="cond" truecount="2" falsecount="0"/>
         <line num="10" count="1" type="stmt"/>
-        <line num="13" count="23" type="stmt"/>
+        <line num="13" count="29" type="stmt"/>
       </file>
       <file name="IconButton.styles.jsx" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/IconButton/IconButton.styles.jsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="5" type="stmt"/>
-        <line num="7" count="23" type="stmt"/>
+        <line num="3" count="9" type="stmt"/>
+        <line num="7" count="29" type="stmt"/>
       </file>
       <file name="index.js" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/IconButton/index.js">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -110,13 +110,13 @@
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
       <file name="Input.component.jsx" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/Input/Input.component.jsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="7" count="23" type="stmt"/>
+        <line num="7" count="39" type="stmt"/>
       </file>
       <file name="Input.styles.jsx" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/Input/Input.styles.jsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="3" count="6" type="stmt"/>
-        <line num="4" count="23" type="stmt"/>
-        <line num="7" count="23" type="stmt"/>
+        <line num="3" count="7" type="stmt"/>
+        <line num="4" count="39" type="stmt"/>
+        <line num="7" count="39" type="stmt"/>
       </file>
       <file name="index.js" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/Input/index.js">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -126,35 +126,35 @@
       <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
       <file name="Layout.component.jsx" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/Layout/Layout.component.jsx">
         <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
-        <line num="11" count="4" type="stmt"/>
-        <line num="13" count="4" type="stmt"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="13" count="6" type="stmt"/>
       </file>
       <file name="Layout.styles.jsx" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/Layout/Layout.styles.jsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="3" count="2" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
       </file>
       <file name="index.js" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/Layout/index.js">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
     </package>
     <package name="src.components.LoginForm">
-      <metrics statements="11" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="3"/>
+      <metrics statements="11" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="6"/>
       <file name="LoginForm.component.jsx" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/LoginForm/LoginForm.component.jsx">
-        <metrics statements="7" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="1"/>
-        <line num="8" count="7" type="stmt"/>
-        <line num="10" count="7" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="17" count="7" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
+        <metrics statements="7" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="4"/>
+        <line num="8" count="16" type="stmt"/>
+        <line num="10" count="16" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="17" count="16" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
         <line num="34" count="0" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
       </file>
       <file name="LoginForm.styles.jsx" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/LoginForm/LoginForm.styles.jsx">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="3" count="4" type="stmt"/>
-        <line num="6" count="7" type="stmt"/>
-        <line num="15" count="4" type="stmt"/>
-        <line num="19" count="7" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="6" count="14" type="stmt"/>
+        <line num="15" count="5" type="stmt"/>
+        <line num="19" count="14" type="stmt"/>
       </file>
       <file name="index.js" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/LoginForm/index.js">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -171,7 +171,7 @@
       </file>
       <file name="Menu.styles.jsx" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/Menu/Menu.styles.jsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="21" count="4" type="stmt"/>
+        <line num="21" count="5" type="stmt"/>
       </file>
       <file name="index.js" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/Menu/index.js">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -181,17 +181,17 @@
       <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
       <file name="Modal.component.jsx" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/Modal/Modal.component.jsx">
         <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="15" count="9" type="cond" truecount="2" falsecount="0"/>
-        <line num="17" count="9" type="stmt"/>
+        <line num="15" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="11" type="stmt"/>
       </file>
       <file name="Modal.styles.jsx" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/Modal/Modal.styles.jsx">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="3" count="4" type="stmt"/>
-        <line num="12" count="9" type="stmt"/>
-        <line num="15" count="4" type="stmt"/>
-        <line num="17" count="9" type="stmt"/>
-        <line num="29" count="4" type="stmt"/>
-        <line num="35" count="4" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="12" count="11" type="stmt"/>
+        <line num="15" count="5" type="stmt"/>
+        <line num="17" count="11" type="stmt"/>
+        <line num="29" count="5" type="stmt"/>
+        <line num="35" count="5" type="stmt"/>
       </file>
       <file name="index.js" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/Modal/index.js">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -213,14 +213,14 @@
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="SearchBar.component.jsx" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/SearchBar/SearchBar.component.jsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="14" count="8" type="stmt"/>
-        <line num="16" count="8" type="stmt"/>
+        <line num="14" count="10" type="stmt"/>
+        <line num="16" count="10" type="stmt"/>
       </file>
       <file name="SearchBar.styles.jsx" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/SearchBar/SearchBar.styles.jsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="3" count="4" type="stmt"/>
-        <line num="10" count="4" type="stmt"/>
-        <line num="32" count="4" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="32" count="5" type="stmt"/>
       </file>
       <file name="index.js" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/SearchBar/index.js">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -230,32 +230,49 @@
       <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
       <file name="Switch.component.jsx" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/Switch/Switch.component.jsx">
         <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="11" count="8" type="stmt"/>
+        <line num="11" count="10" type="stmt"/>
       </file>
       <file name="Switch.styles.jsx" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/Switch/Switch.styles.jsx">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="4" type="stmt"/>
-        <line num="7" count="4" type="stmt"/>
-        <line num="32" count="4" type="stmt"/>
-        <line num="49" count="4" type="stmt"/>
-        <line num="52" count="7" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="32" count="5" type="stmt"/>
+        <line num="49" count="5" type="stmt"/>
+        <line num="52" count="9" type="stmt"/>
       </file>
       <file name="index.js" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/Switch/index.js">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
     </package>
     <package name="src.components.VideoCard">
-      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="22" coveredstatements="16" conditionals="10" coveredconditionals="3" methods="5" coveredmethods="2"/>
       <file name="VideoCard.component.jsx" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/VideoCard/VideoCard.component.jsx">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="21" count="49" type="stmt"/>
-        <line num="30" count="49" type="stmt"/>
+        <metrics statements="17" coveredstatements="11" conditionals="10" coveredconditionals="3" methods="5" coveredmethods="2"/>
+        <line num="19" count="194" type="stmt"/>
+        <line num="20" count="194" type="stmt"/>
+        <line num="29" count="194" type="stmt"/>
+        <line num="30" count="194" type="stmt"/>
+        <line num="33" count="194" type="cond" truecount="1" falsecount="1"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="36" count="194" type="stmt"/>
+        <line num="37" count="73" type="cond" truecount="1" falsecount="1"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="40" count="73" type="stmt"/>
+        <line num="44" count="194" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="49" count="194" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="54" count="194" type="stmt"/>
       </file>
       <file name="VideoCard.styles.jsx" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/VideoCard/VideoCard.styles.jsx">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="15" count="4" type="stmt"/>
-        <line num="22" count="4" type="stmt"/>
-        <line num="43" count="4" type="stmt"/>
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="15" count="5" type="stmt"/>
+        <line num="22" count="5" type="stmt"/>
+        <line num="26" count="5" type="stmt"/>
+        <line num="31" count="5" type="stmt"/>
+        <line num="53" count="5" type="stmt"/>
       </file>
       <file name="index.js" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/VideoCard/index.js">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -265,15 +282,15 @@
       <metrics statements="6" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="1"/>
       <file name="Favorites.page.jsx" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/pages/Favorites/Favorites.page.jsx">
         <metrics statements="3" coveredstatements="2" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="1"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
       </file>
       <file name="Favorites.styles.jsx" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/pages/Favorites/Favorites.styles.jsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="10" count="2" type="stmt"/>
-        <line num="14" count="2" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
       </file>
       <file name="index.js" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/pages/Favorites/index.js">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -283,15 +300,15 @@
       <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="5" methods="2" coveredmethods="2"/>
       <file name="Home.page.jsx" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/pages/Home/Home.page.jsx">
         <metrics statements="4" coveredstatements="4" conditionals="6" coveredconditionals="5" methods="2" coveredmethods="2"/>
-        <line num="9" count="2" type="stmt"/>
-        <line num="10" count="2" type="stmt"/>
-        <line num="12" count="2" type="stmt"/>
-        <line num="26" count="50" type="cond" truecount="2" falsecount="0"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="26" count="75" type="cond" truecount="2" falsecount="0"/>
       </file>
       <file name="Home.styles.jsx" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/pages/Home/Home.styles.jsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="7" count="2" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
       </file>
       <file name="index.js" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/pages/Home/index.js">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -308,29 +325,37 @@
       </file>
     </package>
     <package name="src.pages.VideoDetail">
-      <metrics statements="17" coveredstatements="7" conditionals="14" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <metrics statements="25" coveredstatements="7" conditionals="20" coveredconditionals="0" methods="7" coveredmethods="0"/>
       <file name="VideoDetail.page.jsx" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/pages/VideoDetail/VideoDetail.page.jsx">
-        <metrics statements="10" coveredstatements="0" conditionals="14" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <metrics statements="18" coveredstatements="0" conditionals="20" coveredconditionals="0" methods="7" coveredmethods="0"/>
         <line num="22" count="0" type="stmt"/>
         <line num="23" count="0" type="stmt"/>
         <line num="24" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="31" count="0" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="76" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="92" count="0" type="stmt"/>
+        <line num="27" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="93" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="109" count="0" type="stmt"/>
       </file>
       <file name="VideoDetail.styles.jsx" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/pages/VideoDetail/VideoDetail.styles.jsx">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="21" count="1" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
-        <line num="47" count="1" type="stmt"/>
-        <line num="54" count="1" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="47" count="2" type="stmt"/>
+        <line num="54" count="2" type="stmt"/>
       </file>
       <file name="index.js" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/pages/VideoDetail/index.js">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -340,65 +365,65 @@
       <metrics statements="35" coveredstatements="17" conditionals="11" coveredconditionals="2" methods="10" coveredmethods="4"/>
       <file name="Global.provider.jsx" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/providers/Global.provider.jsx">
         <metrics statements="35" coveredstatements="17" conditionals="11" coveredconditionals="2" methods="10" coveredmethods="4"/>
-        <line num="7" count="7" type="stmt"/>
-        <line num="10" count="24" type="stmt"/>
-        <line num="11" count="24" type="cond" truecount="1" falsecount="1"/>
+        <line num="7" count="12" type="stmt"/>
+        <line num="10" count="226" type="stmt"/>
+        <line num="11" count="226" type="cond" truecount="1" falsecount="1"/>
         <line num="12" count="0" type="stmt"/>
-        <line num="14" count="24" type="stmt"/>
-        <line num="19" count="16" type="stmt"/>
-        <line num="29" count="16" type="cond" truecount="1" falsecount="6"/>
+        <line num="14" count="226" type="stmt"/>
+        <line num="19" count="26" type="stmt"/>
+        <line num="29" count="25" type="cond" truecount="1" falsecount="6"/>
         <line num="31" count="0" type="stmt"/>
         <line num="37" count="0" type="stmt"/>
         <line num="43" count="0" type="stmt"/>
         <line num="48" count="0" type="stmt"/>
-        <line num="53" count="16" type="stmt"/>
+        <line num="53" count="25" type="stmt"/>
         <line num="58" count="0" type="stmt"/>
         <line num="63" count="0" type="stmt"/>
-        <line num="67" count="16" type="stmt"/>
-        <line num="69" count="16" type="stmt"/>
-        <line num="70" count="8" type="stmt"/>
-        <line num="71" count="8" type="stmt"/>
-        <line num="72" count="8" type="stmt"/>
-        <line num="78" count="16" type="stmt"/>
+        <line num="67" count="26" type="stmt"/>
+        <line num="69" count="26" type="stmt"/>
+        <line num="70" count="12" type="stmt"/>
+        <line num="71" count="12" type="stmt"/>
+        <line num="72" count="12" type="stmt"/>
+        <line num="78" count="26" type="stmt"/>
         <line num="79" count="0" type="stmt"/>
         <line num="81" count="0" type="stmt"/>
         <line num="85" count="0" type="stmt"/>
         <line num="89" count="0" type="stmt"/>
         <line num="92" count="0" type="stmt"/>
-        <line num="96" count="16" type="stmt"/>
+        <line num="96" count="26" type="stmt"/>
         <line num="97" count="0" type="stmt"/>
         <line num="101" count="0" type="stmt"/>
         <line num="105" count="0" type="stmt"/>
-        <line num="108" count="16" type="stmt"/>
+        <line num="108" count="26" type="stmt"/>
         <line num="109" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="112" count="0" type="stmt"/>
-        <line num="115" count="16" type="stmt"/>
+        <line num="115" count="26" type="stmt"/>
         <line num="116" count="0" type="stmt"/>
-        <line num="122" count="16" type="stmt"/>
+        <line num="122" count="26" type="stmt"/>
       </file>
       <file name="index.js" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/providers/index.js">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
     </package>
     <package name="src.utils">
-      <metrics statements="25" coveredstatements="9" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="2"/>
+      <metrics statements="29" coveredstatements="9" conditionals="2" coveredconditionals="0" methods="6" coveredmethods="2"/>
       <file name="constants.js" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/utils/constants.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="7" type="stmt"/>
+        <line num="1" count="12" type="stmt"/>
       </file>
       <file name="storage.js" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/utils/storage.js">
-        <metrics statements="24" coveredstatements="8" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="2"/>
-        <line num="1" count="8" type="stmt"/>
-        <line num="3" count="8" type="stmt"/>
-        <line num="4" count="8" type="stmt"/>
-        <line num="5" count="8" type="stmt"/>
+        <metrics statements="28" coveredstatements="8" conditionals="2" coveredconditionals="0" methods="6" coveredmethods="2"/>
+        <line num="1" count="12" type="stmt"/>
+        <line num="3" count="12" type="stmt"/>
+        <line num="4" count="12" type="stmt"/>
+        <line num="5" count="12" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
-        <line num="17" count="8" type="stmt"/>
-        <line num="19" count="1" type="stmt"/>
-        <line num="20" count="1" type="stmt"/>
-        <line num="21" count="1" type="stmt"/>
+        <line num="17" count="12" type="stmt"/>
+        <line num="19" count="195" type="stmt"/>
+        <line num="20" count="195" type="stmt"/>
+        <line num="21" count="195" type="stmt"/>
         <line num="23" count="0" type="stmt"/>
         <line num="24" count="0" type="stmt"/>
         <line num="29" count="0" type="stmt"/>
@@ -410,24 +435,28 @@
         <line num="36" count="0" type="stmt"/>
         <line num="37" count="0" type="stmt"/>
         <line num="38" count="0" type="stmt"/>
-        <line num="40" count="0" type="stmt"/>
-        <line num="41" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.utils.mocks">
-      <metrics statements="7" coveredstatements="2" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
       <file name="login.api.js" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/utils/mocks/login.api.js">
-        <metrics statements="6" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="0"/>
-        <line num="1" count="7" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="cond" truecount="0" falsecount="4"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
+        <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
+        <line num="1" count="13" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="2" type="cond" truecount="4" falsecount="0"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
       </file>
       <file name="youtube-videos-mock.js" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/utils/mocks/youtube-videos-mock.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="3" type="stmt"/>
+        <line num="1" count="4" type="stmt"/>
       </file>
     </package>
   </project>

@@ -5,12 +5,6 @@ import Menu from './Menu.component';
 import GlobalProvider from '../../providers/Global.provider';
 import { BrowserRouter } from 'react-router-dom';
 
-const mockValue = {
-  state: {
-    authenticated: true,
-  },
-};
-
 describe('<Menu>', () => {
   test('should create the Menu element correctly', () => {
     const { container } = render(
@@ -24,15 +18,14 @@ describe('<Menu>', () => {
     expect(container.querySelector('div')).toBeValid();
   });
 
-  test('should watch the favorite link correctly', () => {
-    const { container } = render(
+  test('should see the home link correctly', () => {
+    const { getByText } = render(
       <BrowserRouter>
-        <GlobalProvider value={mockValue}>
-          <Menu />
+        <GlobalProvider>
+          <Menu>{'Test'}</Menu>
         </GlobalProvider>
       </BrowserRouter>
     );
-
-    expect(container.querySelector('div')).toBeValid();
+    expect(getByText('Home')).toBeInTheDocument();
   });
 });

@@ -22,30 +22,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">83.33% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>5/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
@@ -54,7 +54,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -110,12 +110,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -127,7 +125,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">75x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -155,11 +155,11 @@ import { youtubeVideosMock } from '../../utils/mocks/youtube-videos-mock';
 import ChannelCard from '../../components/ChannelCard/ChannelCard.component';
 import { StyledContainer, StyledWrapperVideos } from './Home.styles.jsx';
 &nbsp;
-function <span class="fstat-no" title="function not covered" >HomePage(</span>) {
-  const isVideos = <span class="cstat-no" title="statement not covered" >Boolean(youtubeVideosMock);</span>
-  const isChannel = <span class="cstat-no" title="statement not covered" >Boolean(youtubeVideosMock.items[0].id.channelId);</span>
+function HomePage() {
+  const isVideos = Boolean(youtubeVideosMock);
+  const isChannel = Boolean(youtubeVideosMock.items[0].id.channelId);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  return (
     &lt;StyledContainer&gt;
       {isVideos ? (
         &lt;&gt;
@@ -172,8 +172,8 @@ function <span class="fstat-no" title="function not covered" >HomePage(</span>) 
           )}
           &lt;StyledWrapperVideos&gt;
             {youtubeVideosMock.items.map(
-<span class="fstat-no" title="function not covered" >              (v</span>ideo) =&gt;
-<span class="cstat-no" title="statement not covered" >                video.id.videoId &amp;&amp; (</span>
+              (video) =&gt;
+                video.id.videoId &amp;&amp; (
                   &lt;VideoCard
                     key={video.etag}
                     id={video.id.videoId}
@@ -187,7 +187,7 @@ function <span class="fstat-no" title="function not covered" >HomePage(</span>) 
           &lt;/StyledWrapperVideos&gt;
         &lt;/&gt;
       ) : (
-        &lt;h2&gt;Error&lt;/h2&gt;
+<span class="branch-1 cbranch-no" title="branch not covered" >        &lt;h2&gt;Error&lt;/h2&gt;</span>
       )}
     &lt;/StyledContainer&gt;
   );
@@ -201,7 +201,7 @@ export default HomePage;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Tue Jan 11 2022 14:54:45 GMT-0600 (Central Standard Time)
+                at Thu Jan 13 2022 23:41:41 GMT-0600 (Central Standard Time)
             </div>
         </div>
         <script src="../../prettify.js"></script>

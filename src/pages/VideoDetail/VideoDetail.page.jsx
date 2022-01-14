@@ -23,9 +23,11 @@ function VideoDetailPage(props) {
   const [isLike, setIsLike] = useState(false);
   const listFavVideos = storageFavVideos.get('videos');
 
-  const like = listFavVideos.some(
-    (item) => item.title === props.history.location.video.title
-  );
+  const like =
+    listFavVideos !== null &&
+    listFavVideos.some(
+      (item) => item.title === props.history.location.video.title
+    );
 
   useEffect(() => {
     if (like === true) {

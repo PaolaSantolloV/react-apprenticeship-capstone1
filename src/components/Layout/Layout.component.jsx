@@ -1,14 +1,22 @@
 import React from 'react';
 
-import { StyledContainer } from './Layout.styles.jsx';
 import Header from '../Header/Header.component';
+import { ThemeProvider } from 'styled-components';
+import { useGlobalContext } from '../../providers';
+import { lightTheme, darkTheme, GlobalStyles } from '../../theme';
+import { StyledContainer } from './Layout.styles.jsx';
 
 // eslint-disable-next-line react/prop-types
-function Layout({ children, theme, toggleTheme }) {
+function Layout({ children }) {
+  const { state } = useGlobalContext();
+
   return (
     <>
-      <Header theme={theme} toggleTheme={toggleTheme} />
-      <StyledContainer>{children}</StyledContainer>
+      <ThemeProvider theme={state.isDarkTheme ? darkTheme : lightTheme}>
+        <GlobalStyles />
+        <Header />
+        <StyledContainer>{children}</StyledContainer>
+      </ThemeProvider>
     </>
   );
 }

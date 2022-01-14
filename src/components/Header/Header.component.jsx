@@ -7,7 +7,7 @@ import {
   FaBars,
   FaRegWindowClose,
 } from 'react-icons/fa';
-import { useAuth } from '../../providers/Auth';
+import { useGlobalContext } from '../../providers';
 import SearchBar from '../SearchBar';
 import IconButton from '../IconButton';
 import Modal from '../Modal';
@@ -22,9 +22,9 @@ import Menu from '../Menu';
 import Switch from '../Switch/Switch.component';
 
 // eslint-disable-next-line react/prop-types
-function Header({ theme, toggleTheme }) {
+function Header() {
   const history = useHistory();
-  const { authenticated, logout, login } = useAuth();
+  const { logout, login, toggleTheme, state } = useGlobalContext();
   const [showMenu, setShowMenu] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
@@ -63,9 +63,13 @@ function Header({ theme, toggleTheme }) {
       {showMenu && <Menu setShowMenu={setShowMenu} />}
 
       <SearchBar />
-      <Switch isOn={theme} handleToggle={toggleTheme} label="Dark Mode" />
+      <Switch
+        isOn={state.isDark}
+        handleToggle={toggleTheme}
+        label="Dark Mode"
+      />
 
-      {authenticated ? (
+      {state.authenticated ? (
         <IconButton onClick={deAuthenticate}>
           <StyledWrapperIcon>
             <FaDoorOpen color="#EEEEEE" size="40px" />

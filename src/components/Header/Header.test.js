@@ -2,14 +2,14 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Header from './Header.component';
-import AuthProvider from '../../providers/Auth';
+import GlobalProvider from '../../providers/Global.provider';
 
 describe('<Header>', () => {
   test('should create the header correctly', () => {
     const { container } = render(
-      <AuthProvider>
+      <GlobalProvider>
         <Header>{'Test'}</Header>
-      </AuthProvider>
+      </GlobalProvider>
     );
 
     expect(container.querySelector('header')).toBeValid();

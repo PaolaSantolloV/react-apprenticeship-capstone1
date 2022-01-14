@@ -2,14 +2,14 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Layout from './Layout.component';
-import AuthProvider from '../../providers/Auth';
+import GlobalProvider from '../../providers/Global.provider';
 
 describe('<Layout>', () => {
   test('should create the Layout element correctly', () => {
     const { container } = render(
-      <AuthProvider>
+      <GlobalProvider>
         <Layout />
-      </AuthProvider>
+      </GlobalProvider>
     );
     expect(container.querySelector('div')).toBeValid();
   });

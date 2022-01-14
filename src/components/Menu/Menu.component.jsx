@@ -2,18 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { StyledContainer, StyledP } from './Menu.styles.jsx';
-import { useAuth } from '../../providers/Auth';
+import { useGlobalContext } from '../../providers';
 
 // eslint-disable-next-line react/prop-types
 function Menu({ setShowMenu }) {
-  const { authenticated } = useAuth();
+  const { state } = useGlobalContext();
 
   return (
     <StyledContainer>
       <Link to="/" onClick={() => setShowMenu(false)}>
         <StyledP>Home</StyledP>
       </Link>
-      {authenticated && (
+      {state.authenticated && (
         <Link to="/favorites" onClick={() => setShowMenu(false)}>
           <StyledP>Favorites</StyledP>
         </Link>

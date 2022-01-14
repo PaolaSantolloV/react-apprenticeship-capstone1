@@ -8,9 +8,11 @@ import Button from '../Button';
 import Input from '../Input';
 import { useGlobalContext } from '../../providers/Global.provider.jsx';
 import getVideos from '../../selectors/getVideos.js';
+import { useHistory } from 'react-router-dom';
 
 // eslint-disable-next-line react/prop-types
 function SearchBar() {
+  const history = useHistory();
   const { state, handleChange, handleSaveResult } = useGlobalContext();
 
   const onSearch = async () => {
@@ -22,6 +24,7 @@ function SearchBar() {
       .catch((error) => {
         console.log(error);
       });
+    history.push('/');
   };
 
   return (

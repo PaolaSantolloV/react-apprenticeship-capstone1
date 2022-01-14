@@ -1,9 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-
 import GlobalProvider from '../../providers/Global.provider';
 import HomePage from '../../pages/Home';
-import NotFound from '../../pages/NotFound';
 import VideoDetailPage from '../../pages/VideoDetail';
 import FavoritesPage from '../../pages/Favorites/Favorites.page';
 import Private from '../Private/Private.component';
@@ -21,10 +19,7 @@ function App() {
             <Private exact path="/favorites">
               <FavoritesPage />
             </Private>
-            <Route exact path="/404">
-              <NotFound />
-            </Route>
-            <Route path="/:id">
+            <Route exact path="/:id">
               <VideoDetailPage />
             </Route>
           </Switch>

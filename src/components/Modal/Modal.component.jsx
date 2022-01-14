@@ -18,7 +18,7 @@ function Modal({ handleClose, show, children }) {
     <StyledModal display={showHideClassName}>
       <StyledModalMain>
         <StyledWrapper>
-          <IconButton onClick={handleClose}>
+          <IconButton title="closeWindow" onClick={handleClose}>
             <StyledWrapperIcon>
               <FaWindowClose color="#EEEEEE" size="30px" />
             </StyledWrapperIcon>

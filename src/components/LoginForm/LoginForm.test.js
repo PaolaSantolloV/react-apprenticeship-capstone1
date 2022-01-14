@@ -26,8 +26,10 @@ describe('<LoginForm>', () => {
   });
 
   test('should onChange password input corretly', () => {
-    const { getByRole } = render(<LoginForm>{'Test'}</LoginForm>);
-    const input = getByRole('textbox', { id: 'password' });
-    fireEvent.change(input, { target: { value: 'jskjss' } });
+    const { getByRole } = render(<LoginForm>{'test'}</LoginForm>);
+    const input = getByRole('textbox');
+    expect(input).toBeInTheDocument();
+    fireEvent.change(input, { target: { value: 'username' } });
+    expect(getByRole('textbox')).toHaveAttribute('type', 'text');
   });
 });

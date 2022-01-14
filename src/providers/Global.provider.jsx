@@ -24,6 +24,7 @@ function GlobalProvider({ children }) {
     searchResult: {},
     sessionData: {},
     isLogin: false,
+    error: false,
   };
 
   function reducer(state, action) {
@@ -64,6 +65,12 @@ function GlobalProvider({ children }) {
         return {
           ...state,
           sessionData: action.payload,
+          error: false,
+        };
+      case 'error':
+        return {
+          ...state,
+          error: true,
         };
       default:
         throw new Error();
@@ -94,8 +101,10 @@ function GlobalProvider({ children }) {
         });
         storage.set(AUTH_STORAGE_KEY, true);
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(() => {
+        dispatch({
+          type: 'error',
+        });
       });
   }, []);
 

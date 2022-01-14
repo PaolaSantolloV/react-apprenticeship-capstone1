@@ -3,7 +3,7 @@ import React from 'react';
 import { StyledIconButton } from './IconButton.styles.jsx';
 
 // eslint-disable-next-line react/prop-types
-function IconButton({ children, onClick, styles }) {
+function IconButton({ children, onClick, styles, title }) {
   var zIndex = 1;
 
   if (styles === 'iconButtonClose') {
@@ -12,7 +12,7 @@ function IconButton({ children, onClick, styles }) {
 
   return (
     // eslint-disable-next-line
-    <StyledIconButton style={zIndex} onClick={onClick}>
+    <StyledIconButton title={title} style={zIndex} onClick={onClick}>
       {children}
     </StyledIconButton>
   );

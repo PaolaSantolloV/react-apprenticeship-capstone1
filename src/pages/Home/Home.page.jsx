@@ -9,6 +9,7 @@ function HomePage() {
   const { state, handleSaveResult } = useGlobalContext();
   const [isVideos, setIsVideos] = useState(Boolean(state.searchResult.lenght));
   const [isChannel, setIsChannel] = useState(false);
+  const [error, setError] = useState('');
 
   useEffect(() => {
     if (isVideos === false) {
@@ -23,10 +24,19 @@ function HomePage() {
           }
         })
         .catch((error) => {
-          console.log(error);
+          setError(error);
         });
+    } else if (state.searchResult.videosMetaInfo[0].id.channelId) {
+      setIsChannel(true);
+    } else {
+      setIsChannel(false);
     }
-  }, [isVideos, state.searchTerm, handleSaveResult]);
+  }, [
+    isVideos,
+    state.searchTerm,
+    handleSaveResult,
+    state.searchResult.videosMetaInfo,
+  ]);
 
   return (
     <StyledContainer>
@@ -59,10 +69,10 @@ function HomePage() {
             )}
           </StyledWrapperVideos>
         </>
+      ) : error ? (
+        <h2>Ha ocurrido un error. {error}</h2>
       ) : (
-        <h2>
-          Ha ocurrido un error en la busqueda por favor vuelve a intentarlo
-        </h2>
+        <h2>Cargando...</h2>
       )}
     </StyledContainer>
   );

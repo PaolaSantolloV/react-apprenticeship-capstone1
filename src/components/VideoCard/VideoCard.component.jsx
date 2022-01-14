@@ -65,7 +65,7 @@ function VideoCard({ image, id, title, description, mockVideo, favorite }) {
         <StyledWrapperTitle>
           <StyledTitle> {title}</StyledTitle>
           {state.authenticated && (
-            <IconButton onClick={like ? handleUnLike : handleLike}>
+            <IconButton title="like" onClick={like ? handleUnLike : handleLike}>
               {isLike ? (
                 <StyledWrapperIcon>
                   <FaHeart color="#E72C2C" size="30px" />

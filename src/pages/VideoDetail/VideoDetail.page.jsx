@@ -22,6 +22,8 @@ function VideoDetailPage(props) {
   const [isLike, setIsLike] = useState(false);
   const listFavVideos = storageFavVideos.get('videos');
 
+  console.log('props', props);
+
   const like =
     listFavVideos !== null &&
     listFavVideos.some(
@@ -60,7 +62,10 @@ function VideoDetailPage(props) {
           <StyledWrapperTitle>
             <StyledTitle>{props.history.location.video.title}</StyledTitle>
             {state.authenticated && (
-              <IconButton onClick={like ? handleUnLike : handleLike}>
+              <IconButton
+                title="like"
+                onClick={like ? handleUnLike : handleLike}
+              >
                 {isLike ? (
                   <StyledWrapperIcon>
                     <FaHeart color="#E72C2C" size="30px" />

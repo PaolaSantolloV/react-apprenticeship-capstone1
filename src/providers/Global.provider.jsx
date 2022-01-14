@@ -20,7 +20,8 @@ function GlobalProvider({ children }) {
     theme: 'light',
     isDarkTheme: '',
     isDark: false,
-    inputValue: '',
+    searchTerm: 'wizeline',
+    searchResult: {},
     sessionData: {},
     isLogin: false,
   };
@@ -44,10 +45,15 @@ function GlobalProvider({ children }) {
           ...state,
           isDark: !state.isDark,
         };
-      case 'inputValue':
+      case 'searchTerm':
         return {
           ...state,
-          inputValue: action.payload,
+          searchTerm: action.payload,
+        };
+      case 'searchResult':
+        return {
+          ...state,
+          searchResult: action.payload,
         };
       case 'authenticated':
         return {
@@ -114,8 +120,15 @@ function GlobalProvider({ children }) {
 
   const handleChange = (event) => {
     dispatch({
-      type: 'inputValue',
+      type: 'searchTerm',
       payload: event.currentTarget.value,
+    });
+  };
+
+  const handleSaveResult = (videos) => {
+    dispatch({
+      type: 'searchResult',
+      payload: videos,
     });
   };
 
@@ -126,6 +139,7 @@ function GlobalProvider({ children }) {
         logout,
         toggleTheme,
         handleChange,
+        handleSaveResult,
         state,
         dispatch,
       }}

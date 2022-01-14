@@ -1,27 +1,50 @@
-import React from 'react';
-
+import React, { useEffect, useState } from 'react';
 import VideoCard from '../../components/VideoCard';
-import { youtubeVideosMock } from '../../utils/mocks/youtube-videos-mock';
 import ChannelCard from '../../components/ChannelCard/ChannelCard.component';
 import { StyledContainer, StyledWrapperVideos } from './Home.styles.jsx';
+import { useGlobalContext } from '../../providers/Global.provider';
+import getVideos from '../../selectors/getVideos';
 
 function HomePage() {
-  const isVideos = Boolean(youtubeVideosMock);
-  const isChannel = Boolean(youtubeVideosMock.items[0].id.channelId);
+  const { state, handleSaveResult } = useGlobalContext();
+  const [isVideos, setIsVideos] = useState(Boolean(state.searchResult.lenght));
+  const [isChannel, setIsChannel] = useState(false);
+
+  useEffect(() => {
+    if (isVideos === false) {
+      console.log('pet');
+      getVideos(state.searchTerm)
+        .then((result) => {
+          handleSaveResult(result);
+          setIsVideos(true);
+          console.log(result);
+          if (result.videosMetaInfo[0].id.channelId) {
+            setIsChannel(true);
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+  }, [isVideos, state.searchTerm, handleSaveResult]);
 
   return (
     <StyledContainer>
-      {isVideos ? (
+      {isVideos === true ? (
         <>
-          {isChannel && (
+          {isChannel === true && (
             <ChannelCard
-              description={youtubeVideosMock.items[0].snippet.description}
-              logo={youtubeVideosMock.items[0].snippet.thumbnails.default}
-              title={youtubeVideosMock.items[0].snippet.title}
+              description={
+                state.searchResult.videosMetaInfo[0].snippet.description
+              }
+              logo={
+                state.searchResult.videosMetaInfo[0].snippet.thumbnails.default
+              }
+              title={state.searchResult.videosMetaInfo[0].snippet.title}
             />
           )}
           <StyledWrapperVideos>
-            {youtubeVideosMock.items.map(
+            {state.searchResult.videosMetaInfo.map(
               (video) =>
                 video.id.videoId && (
                   <VideoCard
@@ -37,7 +60,9 @@ function HomePage() {
           </StyledWrapperVideos>
         </>
       ) : (
-        <h2>Error</h2>
+        <h2>
+          Ha ocurrido un error en la busqueda por favor vuelve a intentarlo
+        </h2>
       )}
     </StyledContainer>
   );

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
 import IconButton from '../../components/IconButton';
 import VideoCard from '../../components/VideoCard/VideoCard.component';
-import { youtubeVideosMock } from '../../utils/mocks/youtube-videos-mock';
 import { useGlobalContext } from '../../providers';
 import { FaRegHeart, FaHeart } from 'react-icons/fa';
 import {
@@ -88,7 +87,7 @@ function VideoDetailPage(props) {
         <div className="wrapperSuggestionVideos">
           {props.history.location.video.mockVideo ? (
             <StyledWrapperVideos>
-              {youtubeVideosMock.items.map(
+              {state.searchResult.videosMetaInfo.map(
                 (video) =>
                   video.id.videoId && (
                     <VideoCard

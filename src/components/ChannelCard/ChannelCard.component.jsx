@@ -13,7 +13,9 @@ function ChannelCard({ description, title, logo }) {
     <StyledContainer>
       <StyledLImage alt={title} src={logo.url} />
       <StyledWrapperChannelInfo>
-        <h2 className="titleForm">{title}</h2>
+        <h2 data-testid="test" className="titleForm">
+          {title}
+        </h2>
         <StyledLabel>{description}</StyledLabel>
       </StyledWrapperChannelInfo>
     </StyledContainer>

@@ -16,4 +16,17 @@ describe('<HomePage>', () => {
     );
     expect(container.querySelector('div')).toBeValid();
   });
+
+  test('should create the VideoCards correctly', () => {
+    const { getByTestId } = render(
+      <BrowserRouter>
+        <GlobalProvider>
+          <HomePage />
+        </GlobalProvider>
+      </BrowserRouter>
+    );
+    const videoCard = getByTestId('test');
+    expect(videoCard).toBeInTheDocument();
+    // expect(container.querySelector('div')).toBeValid();
+  });
 });

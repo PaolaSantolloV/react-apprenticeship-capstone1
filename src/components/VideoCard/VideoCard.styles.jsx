@@ -19,18 +19,27 @@ export const StyledWrapper = styled.div`
   padding-left: 10px;
 `;
 
+export const StyledWrapperTitle = styled.div`
+  display: flex;
+`;
+
+export const StyledWrapperIcon = styled.div`
+  display: flex;
+  margin: 10px;
+`;
+
 export const StyledImage = styled.img`
   border-radius: 8px;
 `;
 
 /* istanbul ignore next */
 export const StyledTitle = styled.h2`
+  -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 400;
   font-size: medium;
-  color: ${({ theme }) => theme.text}
-
+  color: #383838 width:240px;
   display: block;
   display: -webkit-box;
   line-height: 1.3em;
@@ -38,6 +47,7 @@ export const StyledTitle = styled.h2`
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  width: 240px;
 `;
 
 export const StyledDescription = styled.p`

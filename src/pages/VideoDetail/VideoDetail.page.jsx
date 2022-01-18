@@ -22,8 +22,6 @@ function VideoDetailPage(props) {
   const [isLike, setIsLike] = useState(false);
   const listFavVideos = storageFavVideos.get('videos');
 
-  console.log('props', props);
-
   const like =
     listFavVideos !== null &&
     listFavVideos.some(
@@ -54,7 +52,7 @@ function VideoDetailPage(props) {
         <StyledVideo
           allowFullScreen
           frameBorder="0"
-          title="rick roll"
+          title="rick-roll"
           src={`https://www.youtube.com/embed/${props.match.params.id}?controls=0&autoplay=1`}
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         />

@@ -26,10 +26,16 @@ describe('<LoginForm>', () => {
   });
 
   test('should onChange password input corretly', () => {
-    const { getByRole } = render(<LoginForm>{'test'}</LoginForm>);
-    const input = getByRole('textbox');
+    const { getByTitle } = render(<LoginForm>{'test'}</LoginForm>);
+    const input = getByTitle('password');
     expect(input).toBeInTheDocument();
     fireEvent.change(input, { target: { value: 'username' } });
-    expect(getByRole('textbox')).toHaveAttribute('type', 'text');
+    expect(input).toHaveAttribute('type', 'password');
+  });
+
+  test('should create error label when form has error', () => {
+    const { getByRole } = render(<LoginForm error={true}>{'Test'}</LoginForm>);
+    const error = getByRole('heading', { level: 2 });
+    expect(error).toBeInTheDocument();
   });
 });

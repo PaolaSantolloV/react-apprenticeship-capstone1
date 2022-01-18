@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Menu from './Menu.component';
 import GlobalProvider from '../../providers/Global.provider';
@@ -18,21 +18,49 @@ describe('<Menu>', () => {
     expect(container.querySelector('div')).toBeValid();
   });
 
-  // test('should see the home link correctly', () => {
-  //   // const setShowMenu = jest.fn();
-  //   // const useStateSpy = jest.spyOn(React, 'useState');
-  //   // useStateSpy.mockImplementation((init) => [init, setShowMenu]);
+  test('should see the home link correctly', () => {
+    const setShowMenu = jest.fn();
+    const useShowMenuSpy = jest.spyOn(React, 'useState');
+    useShowMenuSpy.mockImplementation((init) => [init, setShowMenu]);
+
+    const { getByText } = render(
+      <BrowserRouter>
+        <GlobalProvider>
+          <Menu setShowMenu={setShowMenu}>{'Test'}</Menu>
+        </GlobalProvider>
+      </BrowserRouter>
+    );
+    const home = getByText('Home');
+    fireEvent.click(home);
+    expect(home).toBeInTheDocument();
+  });
+
+  // test('should see the favorite link correctly', () => {
+  //   const setShowMenu = jest.fn();
+  //   const useShowMenuSpy = jest.spyOn(React, 'useState');
+  //   useShowMenuSpy.mockImplementation((init) => [init, setShowMenu]);
+
+  //   const mockValue = React.createContext({
+  //     state: {
+  //       sessionData: {
+  //         id: '123',
+  //         name: 'Wizeline',
+  //         avatarUrl:
+  //           'https://media.glassdoor.com/sqll/868055/wizeline-squarelogo-1473976610815.png',
+  //       },
+  //       authenticated: true,
+  //     },
+  //   });
 
   //   const { getByText } = render(
   //     <BrowserRouter>
-  //       <GlobalProvider>
-  //         <Menu>{'Test'}</Menu>
+  //       <GlobalProvider testValue={mockValue}>
+  //         <Menu setShowMenu={setShowMenu}>{'Test'}</Menu>
   //       </GlobalProvider>
   //     </BrowserRouter>
   //   );
-  //   const home = getByText('Home');
-  //   fireEvent.click(home);
-  //   // expect(setShowMenu).toHaveBeenCalledWith(0);
-  //   expect(home).toBeValid();
+  //   const fav = getByText('Favorites');
+  //   fireEvent.click(fav);
+  //   expect(fav).toBeInTheDocument();
   // });
 });

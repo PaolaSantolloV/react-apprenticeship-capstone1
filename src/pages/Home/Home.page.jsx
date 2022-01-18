@@ -13,18 +13,17 @@ function HomePage() {
 
   useEffect(() => {
     if (isVideos === false) {
-      console.log('pet');
       getVideos(state.searchTerm)
         .then((result) => {
           handleSaveResult(result);
           setIsVideos(true);
-          console.log(result);
           if (result.videosMetaInfo[0].id.channelId) {
             setIsChannel(true);
           }
         })
         .catch((error) => {
           setError(error);
+          setIsVideos(false);
         });
     } else if (state.searchResult.videosMetaInfo[0].id.channelId) {
       setIsChannel(true);
@@ -70,7 +69,7 @@ function HomePage() {
           </StyledWrapperVideos>
         </>
       ) : error ? (
-        <h2>Ha ocurrido un error. {error}</h2>
+        <h2>Ha ocurrido un error. Probablemente se acabaron las peticiones</h2>
       ) : (
         <h2>Cargando...</h2>
       )}

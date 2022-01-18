@@ -38,16 +38,20 @@ function Header() {
     event.preventDefault();
     login(loginData);
     if (state.error === true) {
-      setShowModal(false);
-    } else {
       setShowModal(true);
+    } else {
+      setShowModal(false);
       history.push('/');
     }
   }
 
   return (
     <StyledHeader>
-      <Modal show={showModal} handleClose={() => setShowModal(false)}>
+      <Modal
+        title="modalDiv"
+        show={showModal}
+        handleClose={() => setShowModal(false)}
+      >
         <LoginForm authenticate={authenticate} error={state.error} />
       </Modal>
       {showMenu ? (
@@ -78,13 +82,13 @@ function Header() {
       />
 
       {state.authenticated ? (
-        <IconButton title="iconLogin" onClick={deAuthenticate}>
+        <IconButton title="iconLogout" onClick={deAuthenticate}>
           <StyledWrapperIcon>
             <FaDoorOpen color="#EEEEEE" size="40px" />
           </StyledWrapperIcon>
         </IconButton>
       ) : (
-        <IconButton title="iconLogout" onClick={() => setShowModal(true)}>
+        <IconButton title="iconLogin" onClick={() => setShowModal(true)}>
           <StyledWrapperIcon>
             <FaUserAlt color="#EEEEEE" size="40px" />
           </StyledWrapperIcon>

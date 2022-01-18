@@ -17,4 +17,26 @@ describe('<Private>', () => {
 
     expect(container);
   });
+
+  // test('should create the Private element correctly', () => {
+  //   jest.mock('./../../providers/Global.provider', () => ({
+  //     __esModule: true,
+  //     default: React.createContext(),
+  //   }));
+
+  //   const mockValue = {
+  //     state: {
+  //       authenticated: true,
+  //     },
+  //   };
+  //   const { getByRole } = render(
+  //     <BrowserRouter>
+  //       <GlobalProvider value={mockValue}>
+  //         <Private />
+  //       </GlobalProvider>
+  //     </BrowserRouter>
+  //   );
+  //   const route = getByRole('div', { hidden: true });
+  //   expect(route).toBeInTheDocument();
+  // });
 });

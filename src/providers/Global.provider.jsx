@@ -25,6 +25,7 @@ function GlobalProvider({ children }) {
     sessionData: {},
     isLogin: false,
     error: false,
+    authenticated: false,
   };
 
   function reducer(state, action) {

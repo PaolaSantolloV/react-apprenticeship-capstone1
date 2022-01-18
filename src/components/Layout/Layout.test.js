@@ -13,40 +13,4 @@ describe('<Layout>', () => {
     );
     expect(container.querySelector('div')).toBeValid();
   });
-
-  test('should show dark theme correctly', () => {
-    const mockValue = {
-      theme: 'dark',
-      isDarkTheme: 'dark',
-      isDark: false,
-      inputValue: '',
-      sessionData: {},
-      isLogin: false,
-    };
-
-    const { container } = render(
-      <GlobalProvider value={mockValue}>
-        <Layout />
-      </GlobalProvider>
-    );
-    expect(container);
-  });
-
-  test('should show light theme correctly', () => {
-    const mockValue = {
-      theme: 'light',
-      isDarkTheme: '',
-      isDark: false,
-      inputValue: '',
-      sessionData: {},
-      isLogin: false,
-    };
-
-    const { container } = render(
-      <GlobalProvider value={mockValue}>
-        <Layout />
-      </GlobalProvider>
-    );
-    expect(container);
-  });
 });

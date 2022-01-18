@@ -16,7 +16,6 @@ function SearchBar() {
   const { state, handleChange, handleSaveResult } = useGlobalContext();
 
   const onSearch = async () => {
-    console.log('peticion');
     getVideos(state.searchTerm)
       .then((result) => {
         handleSaveResult(result);
@@ -31,6 +30,7 @@ function SearchBar() {
     <StyledContainer>
       <StyledWrapper>
         <Input
+          title="search"
           placeholder="Search"
           type="text"
           id="search"

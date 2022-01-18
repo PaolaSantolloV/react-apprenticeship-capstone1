@@ -22,6 +22,7 @@ function LoginForm({ authenticate, error }) {
     <StyledSection>
       <StyledTitle>Login</StyledTitle>
       <Input
+        title="username"
         placeholder="UserName"
         type="text"
         id="username"

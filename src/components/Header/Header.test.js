@@ -17,27 +17,12 @@ describe('<Header>', () => {
   });
 
   test('should create the header correctly when is authenticated', () => {
-    const mockValue = {
-      listFavVideos: {
-        id: 'test',
-        image: 'image.jpg',
-        title: 'test',
-        description: 'test',
-        favorite: true,
-      },
-      authenticated: {
-        id: '123',
-        name: 'Wizeline',
-        avatarUrl:
-          'https://media.glassdoor.com/sqll/868055/wizeline-squarelogo-1473976610815.png',
-      },
-    };
     const { getByTitle } = render(
-      <GlobalProvider value={mockValue}>
+      <GlobalProvider>
         <Header>{'Test'}</Header>
       </GlobalProvider>
     );
-    const icon = getByTitle('iconLogout');
+    const icon = getByTitle('iconLogin');
     fireEvent.click(icon);
 
     expect(icon).toBeInTheDocument();
@@ -55,5 +40,41 @@ describe('<Header>', () => {
     fireEvent.click(iconMenu);
 
     expect(iconMenu).toBeInTheDocument();
+  });
+
+  test('should create hide menu button correctly', () => {
+    const setShowMenu = jest.fn();
+    const useShowMenuSpy = jest.spyOn(React, 'useState');
+    useShowMenuSpy.mockImplementation([true, setShowMenu]);
+
+    const { getByTitle } = render(
+      <BrowserRouter>
+        <GlobalProvider>
+          <Header>{'Test'}</Header>
+        </GlobalProvider>
+      </BrowserRouter>
+    );
+    const iconMenu = getByTitle('menu');
+    fireEvent.click(iconMenu);
+    const iconHideMenu = getByTitle('hideMenu');
+    fireEvent.click(iconHideMenu);
+
+    expect(iconMenu).toBeInTheDocument();
+  });
+
+  test('should create close modal correctly', () => {
+    const setShowModal = jest.fn();
+    const useShowModalSpy = jest.spyOn(React, 'useState');
+    useShowModalSpy.mockImplementation([false, setShowModal]);
+
+    const { getByTitle } = render(
+      <BrowserRouter>
+        <GlobalProvider>
+          <Header>{'Test'}</Header>
+        </GlobalProvider>
+      </BrowserRouter>
+    );
+    const closeModal = getByTitle('closeWindow');
+    fireEvent.click(closeModal);
   });
 });

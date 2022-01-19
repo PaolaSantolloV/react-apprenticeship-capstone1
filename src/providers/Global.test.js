@@ -9,6 +9,8 @@ const mockValue = {
   logout: jest.fn(),
   toggleTheme: jest.fn(),
   handleChange: jest.fn(),
+  state: {},
+  dispatch: {},
 };
 
 //this test dont up the coverage

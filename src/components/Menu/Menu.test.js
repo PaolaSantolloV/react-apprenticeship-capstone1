@@ -35,32 +35,24 @@ describe('<Menu>', () => {
     expect(home).toBeInTheDocument();
   });
 
-  // test('should see the favorite link correctly', () => {
+  // test('should see the favorites link correctly', () => {
   //   const setShowMenu = jest.fn();
   //   const useShowMenuSpy = jest.spyOn(React, 'useState');
   //   useShowMenuSpy.mockImplementation((init) => [init, setShowMenu]);
 
-  //   const mockValue = React.createContext({
-  //     state: {
-  //       sessionData: {
-  //         id: '123',
-  //         name: 'Wizeline',
-  //         avatarUrl:
-  //           'https://media.glassdoor.com/sqll/868055/wizeline-squarelogo-1473976610815.png',
-  //       },
-  //       authenticated: true,
-  //     },
-  //   });
+  //   jest.mock('../../providers/Global.provider', () => ({
+  //     authenticated: true,
+  //   }));
 
-  //   const { getByText } = render(
+  //   const { getByTitle } = render(
   //     <BrowserRouter>
-  //       <GlobalProvider testValue={mockValue}>
+  //       <GlobalProvider>
   //         <Menu setShowMenu={setShowMenu}>{'Test'}</Menu>
   //       </GlobalProvider>
   //     </BrowserRouter>
   //   );
-  //   const fav = getByText('Favorites');
-  //   fireEvent.click(fav);
-  //   expect(fav).toBeInTheDocument();
+  //   const home = getByTitle('Favorites');
+  //   fireEvent.click(home);
+  //   expect(home).toBeInTheDocument();
   // });
 });

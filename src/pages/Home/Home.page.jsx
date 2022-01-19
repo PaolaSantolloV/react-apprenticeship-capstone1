@@ -1,41 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import VideoCard from '../../components/VideoCard';
 import ChannelCard from '../../components/ChannelCard/ChannelCard.component';
 import { StyledContainer, StyledWrapperVideos } from './Home.styles.jsx';
 import { useGlobalContext } from '../../providers/Global.provider';
-import getVideos from '../../selectors/getVideos';
+import { useFetch } from '../../hooks/useFetch';
 
 function HomePage() {
-  const { state, handleSaveResult } = useGlobalContext();
-  const [isVideos, setIsVideos] = useState(Boolean(state.searchResult.lenght));
-  const [isChannel, setIsChannel] = useState(false);
-  const [error, setError] = useState('');
-
-  useEffect(() => {
-    if (isVideos === false) {
-      getVideos(state.searchTerm)
-        .then((result) => {
-          handleSaveResult(result);
-          setIsVideos(true);
-          if (result.videosMetaInfo[0].id.channelId) {
-            setIsChannel(true);
-          }
-        })
-        .catch((error) => {
-          setError(error);
-          setIsVideos(false);
-        });
-    } else if (state.searchResult.videosMetaInfo[0].id.channelId) {
-      setIsChannel(true);
-    } else {
-      setIsChannel(false);
-    }
-  }, [
-    isVideos,
-    state.searchTerm,
-    handleSaveResult,
-    state.searchResult.videosMetaInfo,
-  ]);
+  const { state } = useGlobalContext();
+  const { isVideos, isChannel, error } = useFetch();
 
   return (
     <StyledContainer>

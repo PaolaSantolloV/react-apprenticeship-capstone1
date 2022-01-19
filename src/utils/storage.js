@@ -38,7 +38,7 @@ const storageFavVideos = {
       window.localStorage.setItem('videos', JSON.stringify(jsonsVal));
     }
   },
-
+  /* istanbul ignore next */
   remove(value) {
     const rawValue = JSON.parse(window.localStorage.getItem('videos'));
     var jsonsVal = rawValue;

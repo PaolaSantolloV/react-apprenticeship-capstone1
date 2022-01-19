@@ -20,9 +20,7 @@ function SearchBar() {
       .then((result) => {
         handleSaveResult(result);
       })
-      .catch((error) => {
-        console.log(error);
-      });
+      .catch(() => {});
     history.push('/');
   };
 

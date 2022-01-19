@@ -18,6 +18,27 @@ import {
 import { storageFavVideos } from '../../utils/storage';
 
 function VideoDetailPage(props) {
+  console.log(props.history.location);
+
+  const title =
+    props.history.location.video === undefined
+      ? 'oli'
+      : props.history.location.video.title;
+
+  const description =
+    props.history.location.video === undefined
+      ? 'oli'
+      : props.history.location.video.description;
+
+  const mockVideo =
+    props.history.location.video === undefined
+      ? false
+      : props.history.location.video.mockVideo;
+  const favorite =
+    props.history.location.video === undefined
+      ? false
+      : props.history.location.video.favorite;
+
   const { state } = useGlobalContext();
   const [isLike, setIsLike] = useState(false);
   const listFavVideos = storageFavVideos.get('videos');
@@ -58,7 +79,7 @@ function VideoDetailPage(props) {
         />
         <StyledWrapperDescription>
           <StyledWrapperTitle>
-            <StyledTitle>{props.history.location.video.title}</StyledTitle>
+            <StyledTitle>{title}</StyledTitle>
             {state.authenticated && (
               <IconButton
                 title="like"
@@ -78,17 +99,15 @@ function VideoDetailPage(props) {
           </StyledWrapperTitle>
 
           <StyledDivider />
-          {props.history.location.video.description && (
+          {description && (
             <>
-              <StyledDescription>
-                {props.history.location.video.description}
-              </StyledDescription>
+              <StyledDescription>{description}</StyledDescription>
               <StyledDivider />
             </>
           )}
         </StyledWrapperDescription>
         <div className="wrapperSuggestionVideos">
-          {props.history.location.video.mockVideo ? (
+          {mockVideo ? (
             <StyledWrapperVideos>
               {state.searchResult.videosMetaInfo.map(
                 (video) =>
@@ -104,7 +123,7 @@ function VideoDetailPage(props) {
                   )
               )}
             </StyledWrapperVideos>
-          ) : props.history.location.video.favorite ? (
+          ) : favorite ? (
             <StyledWrapperVideos>
               {listFavVideos &&
                 listFavVideos.map((videoFav) => (
@@ -126,5 +145,20 @@ function VideoDetailPage(props) {
     </StyledContainer>
   );
 }
+
+VideoDetailPage.defaultProps = {
+  history: {
+    location: {
+      video: {
+        title: '',
+        description: '',
+        mockVideo: false,
+        image: '',
+        id: '',
+        favorite: false,
+      },
+    },
+  },
+};
 
 export default withRouter(VideoDetailPage);

@@ -41,9 +41,9 @@ function HomePage() {
           </StyledWrapperVideos>
         </>
       ) : error ? (
-        <h2>Ha ocurrido un error. Probablemente se acabaron las peticiones</h2>
+        <h2>An error has occurred. Requests are probably over</h2>
       ) : (
-        <h2>Cargando...</h2>
+        <h2>Loading...</h2>
       )}
     </StyledContainer>
   );

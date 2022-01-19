@@ -22,30 +22,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>4/4</span>
+                <span class='fraction'>3/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">83.33% </span>
+                <span class="strong">25% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>5/6</span>
+                <span class='fraction'>2/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>1/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>4/4</span>
+                <span class='fraction'>3/4</span>
             </div>
         
             
@@ -54,7 +54,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -102,7 +102,13 @@
 <a name='L44'></a><a href='#L44'>44</a>
 <a name='L45'></a><a href='#L45'>45</a>
 <a name='L46'></a><a href='#L46'>46</a>
-<a name='L47'></a><a href='#L47'>47</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -110,12 +116,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -127,7 +131,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">50x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -149,31 +161,35 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
-&nbsp;
 import VideoCard from '../../components/VideoCard';
-import { youtubeVideosMock } from '../../utils/mocks/youtube-videos-mock';
 import ChannelCard from '../../components/ChannelCard/ChannelCard.component';
 import { StyledContainer, StyledWrapperVideos } from './Home.styles.jsx';
+import { useGlobalContext } from '../../providers/Global.provider';
+import { useFetch } from '../../hooks/useFetch';
 &nbsp;
 function HomePage() {
-  const isVideos = Boolean(youtubeVideosMock);
-  const isChannel = Boolean(youtubeVideosMock.items[0].id.channelId);
+  const { state } = useGlobalContext();
+  const { isVideos, isChannel, error } = useFetch();
 &nbsp;
   return (
     &lt;StyledContainer&gt;
-      {isVideos ? (
-        &lt;&gt;
-          {isChannel &amp;&amp; (
+      {isVideos === true ? (
+<span class="branch-0 cbranch-no" title="branch not covered" >        &lt;&gt;</span>
+          {isChannel === true &amp;&amp; (
             &lt;ChannelCard
-              description={youtubeVideosMock.items[0].snippet.description}
-              logo={youtubeVideosMock.items[0].snippet.thumbnails.default}
-              title={youtubeVideosMock.items[0].snippet.title}
+              description={
+                state.searchResult.videosMetaInfo[0].snippet.description
+              }
+              logo={
+                state.searchResult.videosMetaInfo[0].snippet.thumbnails.default
+              }
+              title={state.searchResult.videosMetaInfo[0].snippet.title}
             /&gt;
           )}
           &lt;StyledWrapperVideos&gt;
-            {youtubeVideosMock.items.map(
-              (video) =&gt;
-                video.id.videoId &amp;&amp; (
+            {state.searchResult.videosMetaInfo.map(
+<span class="fstat-no" title="function not covered" >              (v</span>ideo) =&gt;
+<span class="cstat-no" title="statement not covered" >                video.id.videoId &amp;&amp; (</span>
                   &lt;VideoCard
                     key={video.etag}
                     id={video.id.videoId}
@@ -186,8 +202,10 @@ function HomePage() {
             )}
           &lt;/StyledWrapperVideos&gt;
         &lt;/&gt;
+      ) : error ? (
+<span class="branch-0 cbranch-no" title="branch not covered" >        &lt;h2&gt;An error has occurred. Requests are probably over&lt;/h2&gt;</span>
       ) : (
-<span class="branch-1 cbranch-no" title="branch not covered" >        &lt;h2&gt;Error&lt;/h2&gt;</span>
+        &lt;h2&gt;Loading...&lt;/h2&gt;
       )}
     &lt;/StyledContainer&gt;
   );
@@ -201,7 +219,7 @@ export default HomePage;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Wed Jan 12 2022 23:09:20 GMT-0600 (Central Standard Time)
+                at Wed Jan 19 2022 16:18:20 GMT-0600 (Central Standard Time)
             </div>
         </div>
         <script src="../../../prettify.js"></script>

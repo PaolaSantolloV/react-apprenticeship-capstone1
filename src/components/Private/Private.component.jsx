@@ -10,7 +10,13 @@ function Private({ children, ...rest }) {
   return (
     <Route
       {...rest}
-      render={() => (state.authenticated ? children : <Redirect to="/" />)}
+      render={() =>
+        state.authenticated ? (
+          children
+        ) : (
+          <Redirect title="routeRedirect" to="/" />
+        )
+      }
     />
   );
 }

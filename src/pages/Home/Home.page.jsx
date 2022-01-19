@@ -1,27 +1,31 @@
 import React from 'react';
-
 import VideoCard from '../../components/VideoCard';
-import { youtubeVideosMock } from '../../utils/mocks/youtube-videos-mock';
 import ChannelCard from '../../components/ChannelCard/ChannelCard.component';
 import { StyledContainer, StyledWrapperVideos } from './Home.styles.jsx';
+import { useGlobalContext } from '../../providers/Global.provider';
+import { useFetch } from '../../hooks/useFetch';
 
 function HomePage() {
-  const isVideos = Boolean(youtubeVideosMock);
-  const isChannel = Boolean(youtubeVideosMock.items[0].id.channelId);
+  const { state } = useGlobalContext();
+  const { isVideos, isChannel, error } = useFetch();
 
   return (
     <StyledContainer>
-      {isVideos ? (
+      {isVideos === true ? (
         <>
-          {isChannel && (
+          {isChannel === true && (
             <ChannelCard
-              description={youtubeVideosMock.items[0].snippet.description}
-              logo={youtubeVideosMock.items[0].snippet.thumbnails.default}
-              title={youtubeVideosMock.items[0].snippet.title}
+              description={
+                state.searchResult.videosMetaInfo[0].snippet.description
+              }
+              logo={
+                state.searchResult.videosMetaInfo[0].snippet.thumbnails.default
+              }
+              title={state.searchResult.videosMetaInfo[0].snippet.title}
             />
           )}
           <StyledWrapperVideos>
-            {youtubeVideosMock.items.map(
+            {state.searchResult.videosMetaInfo.map(
               (video) =>
                 video.id.videoId && (
                   <VideoCard
@@ -36,8 +40,10 @@ function HomePage() {
             )}
           </StyledWrapperVideos>
         </>
+      ) : error ? (
+        <h2>An error has occurred. Requests are probably over</h2>
       ) : (
-        <h2>Error</h2>
+        <h2>Loading...</h2>
       )}
     </StyledContainer>
   );

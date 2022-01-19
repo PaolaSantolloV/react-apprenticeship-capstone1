@@ -22,16 +22,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">12.5% </span>
+                <span class="strong">31.25% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/16</span>
+                <span class='fraction'>5/16</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>3/6</span>
             </div>
         
             
@@ -43,9 +43,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">12.5% </span>
+                <span class="strong">31.25% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/16</span>
+                <span class='fraction'>5/16</span>
             </div>
         
             
@@ -141,7 +141,11 @@
 <a name='L83'></a><a href='#L83'>83</a>
 <a name='L84'></a><a href='#L84'>84</a>
 <a name='L85'></a><a href='#L85'>85</a>
-<a name='L86'></a><a href='#L86'>86</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -166,37 +170,41 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -235,7 +243,7 @@ import {
   FaBars,
   FaRegWindowClose,
 } from 'react-icons/fa';
-import { useAuth } from '../../providers/Auth';
+import { useGlobalContext } from '../../providers';
 import SearchBar from '../SearchBar';
 import IconButton from '../IconButton';
 import Modal from '../Modal';
@@ -250,11 +258,11 @@ import Menu from '../Menu';
 import Switch from '../Switch/Switch.component';
 &nbsp;
 // eslint-disable-next-line react/prop-types
-function Header({ theme, toggleTheme }) {
+function Header() {
   const history = useHistory();
-  const { authenticated, logout, login } = useAuth();
-  const [showMenu, setShowMenu] = <span class="cstat-no" title="statement not covered" >useState(false);</span>
-  const [showModal, setShowModal] = <span class="cstat-no" title="statement not covered" >useState(false);</span>
+  const { logout, login, toggleTheme, state } = useGlobalContext();
+  const [showMenu, setShowMenu] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 &nbsp;
   function <span class="fstat-no" title="function not covered" >deAuthenticate(</span>event) {
 <span class="cstat-no" title="statement not covered" >    event.preventDefault();</span>
@@ -262,20 +270,20 @@ function Header({ theme, toggleTheme }) {
 <span class="cstat-no" title="statement not covered" >    history.push('/');</span>
   }
 &nbsp;
-  function <span class="fstat-no" title="function not covered" >authenticate(</span>event) {
+  function <span class="fstat-no" title="function not covered" >authenticate(</span>event, loginData) {
 <span class="cstat-no" title="statement not covered" >    event.preventDefault();</span>
-<span class="cstat-no" title="statement not covered" >    login();</span>
+<span class="cstat-no" title="statement not covered" >    login(loginData);</span>
 <span class="cstat-no" title="statement not covered" >    setShowModal(false);</span>
 <span class="cstat-no" title="statement not covered" >    history.push('/');</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  return (
     &lt;StyledHeader&gt;
       &lt;Modal show={showModal} handleClose={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >setShowModal(false)}</span>&gt;
         &lt;LoginForm authenticate={authenticate} /&gt;
       &lt;/Modal&gt;
       {showMenu ? (
-        &lt;IconButton styles="iconButtonClose" onClick={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >setShowMenu(false)}</span>&gt;
+<span class="branch-0 cbranch-no" title="branch not covered" >        &lt;IconButton styles="iconButtonClose" onClick={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >setShowMenu(false)}</span>&gt;</span>
           &lt;StyledWrapperIconClose&gt;
             &lt;FaRegWindowClose color="#EEEEEE" size="30px" /&gt;
           &lt;/StyledWrapperIconClose&gt;
@@ -288,13 +296,17 @@ function Header({ theme, toggleTheme }) {
         &lt;/IconButton&gt;
       )}
 &nbsp;
-      {showMenu &amp;&amp; &lt;Menu setShowMenu={setShowMenu} /&gt;}
+      {showMenu &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;Menu setShowMenu={setShowMenu} /&gt;}</span>
 &nbsp;
       &lt;SearchBar /&gt;
-      &lt;Switch isOn={theme} handleToggle={toggleTheme} label="Dark Mode" /&gt;
+      &lt;Switch
+        isOn={state.isDark}
+        handleToggle={toggleTheme}
+        label="Dark Mode"
+      /&gt;
 &nbsp;
-      {authenticated ? (
-        &lt;IconButton onClick={deAuthenticate}&gt;
+      {state.authenticated ? (
+<span class="branch-0 cbranch-no" title="branch not covered" >        &lt;IconButton onClick={deAuthenticate}&gt;</span>
           &lt;StyledWrapperIcon&gt;
             &lt;FaDoorOpen color="#EEEEEE" size="40px" /&gt;
           &lt;/StyledWrapperIcon&gt;
@@ -318,7 +330,7 @@ export default Header;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Tue Jan 11 2022 14:54:45 GMT-0600 (Central Standard Time)
+                at Thu Jan 13 2022 23:41:41 GMT-0600 (Central Standard Time)
             </div>
         </div>
         <script src="../../prettify.js"></script>

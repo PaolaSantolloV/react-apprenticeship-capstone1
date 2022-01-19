@@ -11,14 +11,14 @@ import {
 } from './Modal.styles.jsx';
 
 // eslint-disable-next-line react/prop-types
-function Modal({ handleClose, show, children }) {
+function Modal({ handleClose, show, title, children }) {
   const showHideClassName = show ? 'block' : 'none';
 
   return (
-    <StyledModal display={showHideClassName}>
+    <StyledModal title={title} display={showHideClassName}>
       <StyledModalMain>
         <StyledWrapper>
-          <IconButton onClick={handleClose}>
+          <IconButton title="closeWindow" onClick={handleClose}>
             <StyledWrapperIcon>
               <FaWindowClose color="#EEEEEE" size="30px" />
             </StyledWrapperIcon>

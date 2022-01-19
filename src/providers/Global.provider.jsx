@@ -1,6 +1,7 @@
 import React, { useEffect, useContext, useCallback, useReducer } from 'react';
 
 import { AUTH_STORAGE_KEY } from '../utils/constants';
+import loginApi from '../utils/mocks/login.api';
 import { storage } from '../utils/storage';
 
 const GlobalContext = React.createContext(null);
@@ -19,7 +20,12 @@ function GlobalProvider({ children }) {
     theme: 'light',
     isDarkTheme: '',
     isDark: false,
-    inputValue: '',
+    searchTerm: 'wizeline',
+    searchResult: {},
+    sessionData: {},
+    isLogin: false,
+    error: false,
+    authenticated: false,
   };
 
   function reducer(state, action) {
@@ -41,15 +47,31 @@ function GlobalProvider({ children }) {
           ...state,
           isDark: !state.isDark,
         };
-      case 'inputValue':
+      case 'searchTerm':
         return {
           ...state,
-          inputValue: action.payload,
+          searchTerm: action.payload,
+        };
+      case 'searchResult':
+        return {
+          ...state,
+          searchResult: action.payload,
         };
       case 'authenticated':
         return {
           ...state,
           authenticated: action.payload,
+        };
+      case 'sessionData':
+        return {
+          ...state,
+          sessionData: action.payload,
+          error: false,
+        };
+      case 'error':
+        return {
+          ...state,
+          error: true,
         };
       default:
         throw new Error();
@@ -67,15 +89,31 @@ function GlobalProvider({ children }) {
     });
   }, []);
 
-  const login = useCallback(() => {
-    dispatch({
-      type: 'authenticated',
-      payload: true,
-    });
-    storage.set(AUTH_STORAGE_KEY, true);
+  const login = useCallback((loginData) => {
+    loginApi(loginData.username, loginData.password)
+      .then((result) => {
+        dispatch({
+          type: 'sessionData',
+          payload: result,
+        });
+        dispatch({
+          type: 'authenticated',
+          payload: true,
+        });
+        storage.set(AUTH_STORAGE_KEY, true);
+      })
+      .catch(() => {
+        dispatch({
+          type: 'error',
+        });
+      });
   }, []);
 
   const logout = useCallback(() => {
+    dispatch({
+      type: 'sessionData',
+      payload: {},
+    });
     dispatch({
       type: 'authenticated',
       payload: false,
@@ -92,8 +130,15 @@ function GlobalProvider({ children }) {
 
   const handleChange = (event) => {
     dispatch({
-      type: 'inputValue',
+      type: 'searchTerm',
       payload: event.currentTarget.value,
+    });
+  };
+
+  const handleSaveResult = (videos) => {
+    dispatch({
+      type: 'searchResult',
+      payload: videos,
     });
   };
 
@@ -104,6 +149,7 @@ function GlobalProvider({ children }) {
         logout,
         toggleTheme,
         handleChange,
+        handleSaveResult,
         state,
         dispatch,
       }}

@@ -20,8 +20,8 @@ export const lightTheme = {
 };
 
 export const darkTheme = {
-  body: '#00002e',
-  text: '#96b3ff',
-  primary: ' #014ba0',
-  secondary: '#002864',
+  body: '#1B2631',
+  text: '#eeeeee',
+  primary: ' #5D6D7E',
+  secondary: '#34495E',
 };

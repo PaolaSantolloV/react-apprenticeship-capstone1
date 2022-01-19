@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1642615545840" clover="3.2.0">
-  <project timestamp="1642615545840" name="All files">
-    <metrics statements="250" coveredstatements="178" conditionals="99" coveredconditionals="40" methods="80" coveredmethods="53" elements="429" coveredelements="271" complexity="0" loc="250" ncloc="250" packages="25" files="62" classes="62"/>
+<coverage generated="1642630701036" clover="3.2.0">
+  <project timestamp="1642630701036" name="All files">
+    <metrics statements="251" coveredstatements="179" conditionals="99" coveredconditionals="40" methods="81" coveredmethods="54" elements="431" coveredelements="273" complexity="0" loc="251" ncloc="251" packages="25" files="62" classes="62"/>
     <package name="src">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="index.js" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/index.js">
@@ -64,7 +64,7 @@
       </file>
     </package>
     <package name="src.components.Header">
-      <metrics statements="22" coveredstatements="13" conditionals="8" coveredconditionals="5" methods="8" coveredmethods="6"/>
+      <metrics statements="23" coveredstatements="14" conditionals="8" coveredconditionals="5" methods="9" coveredmethods="7"/>
       <file name="Header.component.jsx" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/Header/Header.component.jsx">
         <metrics statements="18" coveredstatements="9" conditionals="8" coveredconditionals="5" methods="7" coveredmethods="5"/>
         <line num="26" count="19" type="stmt"/>
@@ -87,11 +87,12 @@
         <line num="91" count="1" type="stmt"/>
       </file>
       <file name="Header.styles.jsx" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/Header/Header.styles.jsx">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="3" count="4" type="stmt"/>
         <line num="4" count="18" type="stmt"/>
-        <line num="17" count="4" type="stmt"/>
-        <line num="22" count="4" type="stmt"/>
+        <line num="10" count="18" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
       </file>
       <file name="index.js" path="/Users/paola.santollo/Documents/GitHub/react-apprenticeship-capstone1/src/components/Header/index.js">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>

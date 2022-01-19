@@ -3,10 +3,11 @@ import styled from 'styled-components';
 export const StyledHeader = styled.header`
   background-color: ${({ theme }) => theme.body};
   display: flex;
-  height: 55px;
+  height: 60px;
   padding-left: 20px;
   padding-right: 20px;
   width: 100%;
+  box-shadow: 5px 5px 5px 5px ${({ theme }) => theme.secondary};
 
   @media (max-width: 562px) {
     padding-left: 0;

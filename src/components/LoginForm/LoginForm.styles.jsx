@@ -18,3 +18,10 @@ export const StyledTitle = styled.h1`
   font-weight: bold;
   color: ${({ theme }) => theme.text};
 `;
+
+/* istanbul ignore next */
+export const StyledError = styled.h2`
+  font-size: smaller;
+  font-weight: 200;
+  color: ${({ theme }) => theme.text};
+`;

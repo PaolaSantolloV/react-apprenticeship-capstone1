@@ -1,22 +1,30 @@
 import React from 'react';
-
 import VideoCard from '../../components/VideoCard';
-import { StyledContainer, StyledTitle } from './Favorites.styles.jsx';
+import {
+  StyledContainer,
+  StyledTitle,
+  StyledWrapperVideos,
+} from './Favorites.styles.jsx';
+import { storageFavVideos } from '../../utils/storage';
 
-function FavoritesPage(listFav) {
+function FavoritesPage() {
+  const listFavVideos = storageFavVideos.get('videos');
+
   return (
     <div>
-      {!!listFav.lenght > 0 ? (
-        listFav.map((videoFav) => (
-          <VideoCard
-            key={videoFav.etag}
-            id={videoFav.id.videoId}
-            image={videoFav.snippet.thumbnails.medium}
-            title={videoFav.snippet.title}
-            description={videoFav.snippet.description}
-            mockVideo
-          />
-        ))
+      {listFavVideos ? (
+        <StyledWrapperVideos>
+          {listFavVideos.map((videoFav) => (
+            <VideoCard
+              key={videoFav.id}
+              id={videoFav.id}
+              image={videoFav.image}
+              title={videoFav.title}
+              description={videoFav.description}
+              favorite
+            />
+          ))}
+        </StyledWrapperVideos>
       ) : (
         <StyledContainer>
           <StyledTitle>You dont have videos on favorites.</StyledTitle>

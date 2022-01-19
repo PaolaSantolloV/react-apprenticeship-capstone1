@@ -1,28 +1,51 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 import Input from '../Input';
 import Button from '../Button';
+import {
+  StyledTitle,
+  StyledSection,
+  StyledError,
+} from './LoginForm.styles.jsx';
 
-import { StyledTitle, StyledSection } from './LoginForm.styles.jsx';
+function LoginForm({ authenticate, error }) {
+  const [loginData, setLoginData] = useState({ username: '', password: '' });
 
-function LoginForm({ authenticate }) {
+  const handleChange = ({ fieldName, event }) => {
+    setLoginData({
+      ...loginData,
+      [fieldName]: event.currentTarget.value,
+    });
+  };
+
   return (
     <StyledSection>
       <StyledTitle>Login</StyledTitle>
-      <div>
-        <Input
-          placeholder="UserName"
-          type="text"
-          id="username"
-          styles="inputForm"
-        />
-        <Input
-          placeholder="Password"
-          type="password"
-          id="password"
-          styles="inputForm"
-        />
-        <Button label="login" onClick={authenticate} />
-      </div>
+      <Input
+        title="username"
+        placeholder="UserName"
+        type="text"
+        id="username"
+        styles="inputForm"
+        onChange={(event) => handleChange({ fieldName: 'username', event })}
+        value={loginData.username}
+      />
+      <Input
+        title="password"
+        placeholder="Password"
+        type="password"
+        id="password"
+        styles="inputForm"
+        onChange={(event) => handleChange({ fieldName: 'password', event })}
+        value={loginData.password}
+      />
+      {error === true && (
+        <StyledError>Username or password invalid</StyledError>
+      )}
+      <Button
+        label="login"
+        onClick={(event) => authenticate(event, loginData)}
+      />
     </StyledSection>
   );
 }

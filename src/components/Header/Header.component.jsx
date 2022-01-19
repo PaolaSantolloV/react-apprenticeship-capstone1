@@ -34,26 +34,38 @@ function Header() {
     history.push('/');
   }
 
-  function authenticate(event) {
+  function authenticate(event, loginData) {
     event.preventDefault();
-    login();
-    setShowModal(false);
-    history.push('/');
+    login(loginData);
+    if (state.error === true) {
+      setShowModal(true);
+    } else {
+      setShowModal(false);
+      history.push('/');
+    }
   }
 
   return (
     <StyledHeader>
-      <Modal show={showModal} handleClose={() => setShowModal(false)}>
-        <LoginForm authenticate={authenticate} />
+      <Modal
+        title="modalDiv"
+        show={showModal}
+        handleClose={() => setShowModal(false)}
+      >
+        <LoginForm authenticate={authenticate} error={state.error} />
       </Modal>
       {showMenu ? (
-        <IconButton styles="iconButtonClose" onClick={() => setShowMenu(false)}>
+        <IconButton
+          title="hideMenu"
+          styles="iconButtonClose"
+          onClick={() => setShowMenu(false)}
+        >
           <StyledWrapperIconClose>
             <FaRegWindowClose color="#EEEEEE" size="30px" />
           </StyledWrapperIconClose>
         </IconButton>
       ) : (
-        <IconButton onClick={() => setShowMenu(true)}>
+        <IconButton title="menu" onClick={() => setShowMenu(true)}>
           <StyledWrapperIcon>
             <FaBars color="#EEEEEE" size="30px" />
           </StyledWrapperIcon>
@@ -70,13 +82,13 @@ function Header() {
       />
 
       {state.authenticated ? (
-        <IconButton onClick={deAuthenticate}>
+        <IconButton title="iconLogout" onClick={deAuthenticate}>
           <StyledWrapperIcon>
             <FaDoorOpen color="#EEEEEE" size="40px" />
           </StyledWrapperIcon>
         </IconButton>
       ) : (
-        <IconButton onClick={() => setShowModal(true)}>
+        <IconButton title="iconLogin" onClick={() => setShowModal(true)}>
           <StyledWrapperIcon>
             <FaUserAlt color="#EEEEEE" size="40px" />
           </StyledWrapperIcon>

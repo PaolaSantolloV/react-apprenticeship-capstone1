@@ -14,4 +14,40 @@ const storage = {
   },
 };
 
-export { storage };
+const storageFavVideos = {
+  get(video) {
+    try {
+      const rawValue = window.localStorage.getItem(video);
+      return JSON.parse(rawValue);
+    } catch (error) {
+      console.error(`Error parsing storage item "${video}".`);
+      return null;
+    }
+  },
+
+  set(value) {
+    const rawValue = JSON.parse(window.localStorage.getItem('videos'));
+    const newVal = JSON.parse(JSON.stringify(value));
+    if (rawValue === null) {
+      var jsons = [];
+      jsons.push(newVal);
+      window.localStorage.setItem('videos', JSON.stringify(jsons));
+    } else {
+      var jsonsVal = rawValue;
+      jsonsVal.push(newVal);
+      window.localStorage.setItem('videos', JSON.stringify(jsonsVal));
+    }
+  },
+  /* istanbul ignore next */
+  remove(value) {
+    const rawValue = JSON.parse(window.localStorage.getItem('videos'));
+    var jsonsVal = rawValue;
+    const filtered = jsonsVal.filter(function (item) {
+      return item.title !== value.title;
+    });
+    localStorage.removeItem('videos');
+    window.localStorage.setItem('videos', JSON.stringify(filtered));
+  },
+};
+
+export { storage, storageFavVideos };
